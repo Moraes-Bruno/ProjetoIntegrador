@@ -28,7 +28,7 @@ main{
 main>p{
     letter-spacing: 2px;
     text-align: center;
-    color: var(--corDestaque);
+    color: crimson;
     font-size: 1.6em;
     margin-top: 2em;
     
