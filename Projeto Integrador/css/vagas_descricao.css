@@ -1,0 +1,176 @@
+/*Codigo para resetar o CSS padrão do navegador**/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    --cor1: #ccc;
+    --cor2: #000000;
+    --cor3: #C20000;
+    --cor4: #ffffff;
+    --cor5: #f1f1f1;
+}
+
+/*Fim do codigo para resetar o CSS padrão do navegador**/
+
+body{
+    font-size: 100%;
+}
+
+
+.topo{
+    background-color: var(--cor3);
+    width: 100%;
+    height: 200px;
+    padding: 50px;
+    line-height: 100px;
+}
+
+.nome_vaga{
+    display: inline-block;
+    color: var(--cor4);
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.imagem_canto{
+    float: right;
+    margin: 0px 20px 0px 20px;
+}
+
+.resumo{
+    width: 80%;
+    margin: auto;
+    background-color: var(--cor5);
+    color: var(--cor2);
+    padding: 50px;
+}
+
+.esquerda{
+    width: 40%;
+    padding: 50px;
+    font-size: 1.5em;
+    display: inline-block;
+}
+
+.direita{
+    width: 40%;
+    padding: 50px;
+    font-size: 1.5em;
+    display: inline;
+    float: right;
+}
+
+.descricoes{
+    line-height: 50px;
+    margin-left: 80px;
+    margin-bottom: 30px;
+    font-size: 0.75em;
+}
+
+.icones{
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin-bottom: 30px;
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+.texto_descritivo{
+    text-align: justify;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.topo_candidatos{
+    width: 85%;
+    background-color: var(--cor3);
+    color: var(--cor4);
+    height: 100px;
+    margin: auto;
+    padding: 25px;
+    line-height: 50px;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.candidatos{
+    width: 80%;
+    margin: auto;
+    background-color: var(--cor5);
+    color: var(--cor2);
+    padding: 50px;
+}
+
+.icone_candidato{
+    width: 230px;
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+    color: var(--cor2);
+}
+
+.foto_candidato{
+    width: 200px;
+    height: 200px;
+}
+
+.botao_candidatar{
+    display: inline-block;
+    background-color: var(--cor3);
+    color: var(--cor4);
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.rodape{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    height: 60px;
+}
+
+.rodape_item{
+    text-decoration: none;
+    color: var(--cor2);
+}
+
+.rodape_item:hover{
+    text-decoration: underline;
+}
+
+#quadro{
+    height: 150px;
+}
+
+
+.cabecalho_logo_rodape{
+    height: 50px;
+}
+
+
+.local_loguinhos{
+    margin-right: 30px;
+}
+
+.loguinho{
+    height: 20px;
+    margin-left: 20px;
+}
+
+/** Fim da sessão rodapé **/
+
+
+

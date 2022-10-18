@@ -1,0 +1,26 @@
+footer {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+
+
+footer a{
+    color: rgb(234, 21, 56);
+    text-decoration: none;
+}
+
+
+.imgs-footer{
+  display: flex;
+  gap: 20px;
+  margin: 20px;
+}
+
+.fa-square-facebook, .fa-instagram{
+    color: #fff;
+    font-size: 35px;
+}
