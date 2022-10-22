@@ -23,14 +23,14 @@
         <div class="bx bx-menu" id="menu-icon"></div>
 
         <ul class="navlist">
+            <li><a href="index.html">Home</a></li>
             <li><a href="#">Home</a></li>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
+            <li><a href="vagas.php">Vagas</a></li>
         </ul>
 
         <div class="h-btn">
-            <a href="login.html" class="sign-in">Entrar</a>
+            <a href="login.php" class="sign-in">Entrar</a>
         </div>
     </header>
 
@@ -155,15 +155,6 @@
 
    <!-- Link JAva Script -->
    <script type="text/javascript" src="../js/Nav.js"></script>
-
-   <footer class="footer">
-        <a href="https://www.fatecitapira.edu.br/">Fatec Itapira</a>
-        <div class="imgs-footer">
-
-            <i class="fa-brands fa-square-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-        </div>
-    </footer>
 
 </body>
 

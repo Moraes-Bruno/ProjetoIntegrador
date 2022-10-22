@@ -6,4 +6,4 @@
     define('BASE', 'portal_de_vagas');
 
 
-    $conn = new MYSQLi(HOST,USER, PASS,BASE);
+    $conn = new PDO("mysql:host=localhost;dbname=".BASE, USER, PASS);

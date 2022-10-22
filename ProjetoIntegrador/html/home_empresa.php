@@ -31,7 +31,7 @@
 
         <div class="navDireita">
             <a href="PerfilAluno.php"><img src="../imgs/Paula_redonda_icone.png" class="imgPerfil"alt="Imagem perfil"></a>
-            <p>Paula Raquel Lima</p>
+            <p>Empresa nome</p>
            </div>
     </header>
 
@@ -40,7 +40,7 @@
     <section class="home" id="home">
         <div class="home-text">
             <h1>Bem-Vindo a <br> <span>Fatec</span></h1>
-            <h4>Paula Raquel Lima</h4>
+            <h4>Empresa nome</h4>
             <a href="vagas.php" class="btn">Saiba Mais</a>
         </div>
     </section>

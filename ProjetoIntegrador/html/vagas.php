@@ -1,32 +1,54 @@
+<?php
+
+include("pdo.php");
+
+
+$sql = "SELECT *  FROM vagas INNER JOIN empresas ON vagas.empresa_id = empresas.empresa_id";
+
+$res = $conn->prepare($sql);
+$res->execute();
+
+//$qtd = $res->num_rows;
+
+$res = $res->fetchAll();
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vagas</title>
-    <link rel="stylesheet" href="../css//headerFooter.css">
+    <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/vagas.css">
+    <script src="https://kit.fontawesome.com/20764abc40.js" crossorigin="anonymous"></script>
     <link rel="stylesheet"
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <script src="https://kit.fontawesome.com/20764abc40.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
     <header>
-        <a href="home.html" class="logo">Fatec<span> Vagas</span></a>
+        <a href="home_aluno.php" class="logo">Fatec<span> Vagas</span></a>
         <div class="bx bx-menu" id="menu-icon"></div>
 
         <ul class="navlist">
-            <li><a href="vagas.php">vagas</a></li>
-            <li><a href="#">Minhas vagas</a></li>
+            <li><a href="home_aluno.php">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="vagas.php">Vagas</a></li>
         </ul>
 
         <div class="navDireita">
-            <img class="imgPerfil" src="../imgs/Paula_redonda_icone.png" alt="imagem perfil">
-            <p>Paula raquel lima</p>
+            <a href="PerfilAluno.php"><img src="../imgs/Paula_redonda_icone.png" class="imgPerfil"alt="Imagem perfil"></a>
+            <p>Paula Raquel Lima</p>
         </div>
     </header>
 
@@ -46,7 +68,7 @@
     </section>
 
 
-    <section class="vagas">
+    <!--<section class="vagas">
 
 
         <aside class="filtros">
@@ -88,89 +110,45 @@
 
                 <button id="botao" type="submit">Filtrar</button>
             </form>
-        </aside>
+        </aside>!-->
 
 
 
         <main class="detalhe-vagas">
-            <div class="detalhe-vaga-mini">
-                <h3 class="nome-vaga">Promotor de Vendas</h3>
-                <h3 class="empresa">Danone</h3>
+            <?php foreach ($res as $linha) : ?>
+                <div class="detalhe-vaga-mini">
+                    <h3 class="nome-vaga"><?php echo $linha['nome_vaga'];?></h3>
+                    <h3 class="empresa"><?php echo $linha['nome_empresa'];?></h3>
 
-                <p class="descricao">Área: Vendas Local de Trabalho: Diversas localidades em todo o Brasil Escala de
-                    Trabalho: 6X1
-                    Principais responsabilidades: - Negociar e executar, nos clientes, a implantação do conteúdo do
-                    programa de
-                    exposição de produtos - Atingir as metas de vendas individuais estabelecidas pela Danone.</p>
+                    <p class="descricao"><?php echo $linha['descricao'];?></p>
 
 
-                <div class="loctime-flex">
-                    <div class="location">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p class="localizacao">Campinas</p>
+                    <div class="loctime-flex">
+                        <div class="location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p class="localizacao"><?php echo $linha['cidade_vaga'];?></p>
+                        </div>
+
+                        <div class="time">
+                            <i class="fa-regular fa-clock"></i>
+                            <p><?php echo $linha['data_abertura'];?></p>
+                        </div>
+
+
                     </div>
-
-                    <div class="time">
-                        <i class="fa-regular fa-clock"></i>
-                        <p>23/23/2323</p>
-                    </div>
-
-
+                    <a href="vagas_descricao.php?id=<?php echo $linha['vaga_id']; ?>" id="detalhes">Ver detalhes</a>
                 </div>
-                <a href="#" id="detalhes">Ver detalhes</a>
-            </div>
-
-
-            <?php
-
-            include("pdo.php");
-
-
-            $sql = "SELECT nome_vaga, nome_empresa, descricao, data_abertura, cidade_vaga  FROM vagas INNER JOIN empresas ON vagas.empresa_id = empresas.empresa_id";
-
-            $res = $conn->query($sql);
-
-            $qtd = $res->num_rows;
-
-            if ($qtd > 0) {
-                while ($row = $res->fetch_assoc()) {
-                    print "<div class='detalhe-vaga-mini'>";
-                    print "<h3 class='nome-vaga'>" . $row['nome_vaga'] . "</h3>";
-                    print "<h3 class='empresa'>" . $row['nome_empresa'] . "</h3>";
-                    print "<p class='descricao'>" . $row['descricao'] . "</p>";
-                    print "<div class='loctime-flex'>";
-                    print "<div class='location'>";
-                    print "<i class='fa-solid fa-location-dot'></i>";
-                    print "<p class='localizacao'>" . $row['cidade_vaga'] . "</p>";
-                    print "</div>";
-                    print "<div class='time'>";
-                    print "<i class='fa-regular fa-clock'></i>";
-                    print "<p>" . $row['data_abertura'] . "</p>";
-                    print "</div>";
-                    print "</div>";
-                    print "<a href='vagas_descricao.php' id='detalhes'>Ver detalhes</a>";
-                    print "</div>";
-                }
-            } else {
-                print "<script>alert('Não há vagas cadastradas!');</script>";
-            }
-
-            ?>
-
-
+            <?php endforeach; ?>
 
         </main>
 
 
     </section>
-    <footer class="footer">
-        <a href="https://www.fatecitapira.edu.br/">Fatec Itapira</a>
-        <div class="imgs-footer">
 
-            <i class="fa-brands fa-square-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-        </div>
-    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+<!-- Link JAva Script -->
+<script type="text/javascript" src="../js/Nav.js"></script>
 </body>
 
 </html>

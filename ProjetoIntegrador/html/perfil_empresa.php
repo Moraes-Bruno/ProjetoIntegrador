@@ -19,7 +19,7 @@
         <ul class="navlist">
             <li><a href="home_aluno.php">Home</a></li>
             <li><a href="#">Home</a></li>
-            <li><a href="cadastrarVaga.php">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="vagas.php">Vagas</a></li>
         </ul>
 
@@ -37,44 +37,20 @@
 
             <form action="post" class="formulario">
 
-                <label for="ra">Ra</label>
+                <label for="ra">Nome Fantasia</label>
                 <input type="text" name="ra">
 
-                <label for="nome">Nome</label>
+                <label for="nome">Razão Social</label>
                 <input type="text" name="nome">
 
-                <label for="sobrenome">Sobrenome</label>
+                <label for="sobrenome">Email Empresa</label>
                 <input type="text" name="sobrenome">
 
-                <label for="nascimento">Data de nascimento</label>
+                <label for="nascimento">Telefone Empresa</label>
                 <input type="text" name="nascimento">
 
-                <label for="genero">Gênero</label>
+                <label for="genero">CNPJ</label>
                 <input type="text" name="genero">
-
-                <label for="curso">Curso</label>
-                <input type="text" name="curso">
-
-                <label for="periodoCurso">Perido do Curso</label>
-                <input type="text" name="periodoCurso">
-
-                <label for="cidade">Cidade</label>
-                <input type="text" name="cidade">
-
-                <label for="competencias">Competencias</label>
-                <input type="text" name="competencias">
-
-                <label for="idioma">Idiomas</label>
-                <input type="text" name="idioma">
-
-                <label for="telefone">Telefone</label>
-                <input type="tel" name="telefone">
-
-                <label for="modadalidade">Modalidade de preferência</label>
-                <input type="text" name="modalidade">
-
-                <label for="interesse">Área de interesse</label>
-                <input type="text" name="interesse">
 
                 <div class="links">
                     <a href="recuperarSenha.php">Alterar senha</a>
@@ -88,14 +64,7 @@
                     <img src="../imgs/Paula_redonda_icone.png" alt="foto de perfil">
                 </picture>
 
-                <p id="bio">Biografia</p>
-                <textarea class="campoDireita"name="Biografia" cols="30" rows="10"></textarea>
-
-                <p>Resumo de experiencias</p>
-                <textarea class="campoDireita"name="experiencia" cols="30" rows="10"></textarea>
-
-                <p>Links</p>
-                <textarea class="campoDireita"name="links" cols="30" rows="10"></textarea>
+                
             </div>
             
             <div class="botoes">

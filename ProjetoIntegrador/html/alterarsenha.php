@@ -35,18 +35,25 @@
     </header>
 
     <section class="fundo_login">
-        <div class="box_recuperar">
+        <div class="box_login">
             <div class="form">
-                <h2>Recuperar Senha</h2>
+                <h2>Alterar Senha</h2>
                 <div class="inputBox">
-                    <input type="email" required="required">
-                    <span>E-mail</span>
+                    <input type="password" required="required">
+                    <span>Senha Atual</span>
                     <i></i>
                 </div>
-                <div class="links">
-                    <a href="cadastrar.php">Cadastrar</a>
+                <div class="inputBox">
+                    <input type="password" required="required">
+                    <span>Nova Senha</span>
+                    <i></i>
                 </div>
-                <input type="submit" value="Recuperar Senha">
+                <div class="inputBox">
+                    <input type="password" required="required">
+                    <span>Repetir Senha</span>
+                    <i></i>
+                </div>
+                <input type="submit" value="Alterar">
             </div>
         </div>
     </section>
@@ -61,4 +68,7 @@
 
 </body>
 
+</html>div>
+    </footer>
+</body>
 </html>

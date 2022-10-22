@@ -19,7 +19,7 @@
   }
 
   header {
-    position: fixed;
+    position: sticky;
     width: 100%;
     right: 0;
     top: 0;
@@ -111,8 +111,8 @@
   }
 
   .imgPerfil{
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
   }
 
    /*----Começo footer----*/
@@ -204,6 +204,8 @@
 }
 
 @media (max-width: 630px) {
+
+  
     header {
       padding: 14px 4%;
     }
@@ -211,6 +213,13 @@
       --big-font: 3.2rem;
       --h2-font: 1.8rem;
       --p-font: 0.9rem;
+    }
+
+    .navDireita {
+      margin-right: 15px;
+    }
+    .navDireita p {
+      display: none;
     }
     
   }

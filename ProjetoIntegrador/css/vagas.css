@@ -51,7 +51,7 @@ body {
 
 .barra-busca form {
   display: flex;
-  width: 700px;
+  width: 600px;
   height: 50px;
 }
 
@@ -186,6 +186,37 @@ form .fa-magnifying-glass {
   font-size: 15px;
   margin-top:  20px;
   text-align: center;
+}
+
+@media (max-width: 1380px) {
+  header{
+    padding: 18px 2%;
+    transition: .2s;
+  }
+  :root{
+    --big-font: 4.7rem;
+    --h2-font: 2.5rem;
+  }
+}
+
+@media (max-width: 1120px) {
+
+}
+
+
+@media (max-width: 770px) {
+
+}
+
+@media (max-width: 750px) {
+
+}
+
+@media (max-width: 630px) {
+  
+  .barra-busca {
+    margin: 20px 0;
+  }
 }
 
 

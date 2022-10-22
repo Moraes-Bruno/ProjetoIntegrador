@@ -1,50 +1,73 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="../css/headerFooter.css">
-    <link rel="stylesheet" href="../css/login.css">
-    <script src="https://kit.fontawesome.com/20764abc40.js" crossorigin="anonymous"></script>
+
+    <title>Home</title>
+
+    <link rel="stylesheet" href="..\css\nav.css">
+    <link rel="stylesheet" href="..\css\index.css">
+
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
+
 <body>
-<header>
-        <a href="home.html" class="logo">Fatec<span> Vagas</span></a>
+
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">Fatec<span> Vagas</span></a>
         <div class="bx bx-menu" id="menu-icon"></div>
 
         <ul class="navlist">
+            <li><a href="index.html">Home</a></li>
             <li><a href="#">Home</a></li>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
+            <li><a href="vagas.php">Vagas</a></li>
         </ul>
 
         <div class="h-btn">
             <a href="login.php" class="sign-in">Entrar</a>
         </div>
     </header>
-    <main>
-        <p>Login</p>
-        <form action="POST">
-            <input type="text" name="email" placeholder="E-mail">
-            <input type="password" name="senha" placeholder="Senha">
-        </form>
 
-        <div class="opcoes">
-            <a href="recuperarSenha.php" id="senha">Esqueci a senha</a>
-            <a href="cadastrar.php" id="cadastrar">Cadastrar</a>
+    <section class="fundo_login">
+        <div class="box_login">
+            <div class="form">
+                <h2>Login</h2>
+                <div class="inputBox">
+                    <input type="email" required="required">
+                    <span>E-mail</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="password" required="required">
+                    <span>Senha</span>
+                    <i></i>
+                </div>
+                <div class="links">
+                    <a href="recuperarSenha.php">Esqueceu a senha</a>
+                    <a href="cadastrar.php">Cadastrar</a>
+                </div>
+                <a href="home_aluno.php"><input type="submit" value="Login"></a>
+            </div>
         </div>
-        <input id="Botao"type="submit" value="Login">
-    </main>
-    <footer class="footer">
-        <a href="https://www.fatecitapira.edu.br/">Fatec Itapira</a>
-        <div class="imgs-footer">
+    </section>
 
-            <i class="fa-brands fa-square-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-        </div>
+    <!-- Home section-->
+
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+   <!-- Link JAva Script -->
+   <script type="text/javascript" src="../js/Nav.js"></script>
+
+</body>
+
+</html>div>
     </footer>
 </body>
 </html>
