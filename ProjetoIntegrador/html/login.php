@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Home</title>
+    <title>Login</title>
 
     <link rel="stylesheet" href="..\css\nav.css">
     <link rel="stylesheet" href="..\css\index.css">
@@ -36,15 +36,15 @@
 
     <section class="fundo_login">
         <div class="box_login">
-            <div class="form">
+            <form class="form" action="logar.php" method="POST">
                 <h2>Login</h2>
                 <div class="inputBox">
-                    <input type="email" required="required">
+                    <input type="email" name="email" required="required">
                     <span>E-mail</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="password" required="required">
+                    <input type="password" name="senha" required="required">
                     <span>Senha</span>
                     <i></i>
                 </div>
@@ -52,8 +52,8 @@
                     <a href="recuperarSenha.php">Esqueceu a senha</a>
                     <a href="cadastrar.php">Cadastrar</a>
                 </div>
-                <a href="home_aluno.php"><input type="submit" value="Login"></a>
-            </div>
+                <input type="submit" value="Login">
+            </form>
         </div>
     </section>
 
@@ -67,7 +67,7 @@
 
 </body>
 
-</html>div>
+</html>d
     </footer>
 </body>
 </html>
