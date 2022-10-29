@@ -5,7 +5,7 @@ class Usuario{
     public function validarLogin($email,$senha){
         global $conn;
 
-        $sqlaluno = "SELECT * FROM  alunos where email_institucional = :email and senha = :senha";
+        $sqlaluno = "SELECT * FROM  alunos where email_inst = :email and senha = :senha";
         $sqlaluno = $conn->prepare($sqlaluno);
         $sqlaluno->bindValue("email", $email);
         $sqlaluno->bindValue("senha", $senha);

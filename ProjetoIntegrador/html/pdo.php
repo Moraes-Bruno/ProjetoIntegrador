@@ -3,7 +3,9 @@
     define('HOST', 'localhost');
     define('USER', 'root');
     define('PASS', '');
-    define('BASE', 'portal_de_vagas');
+    define('BASE', 'vagas');
+
+    global $conn;
 
 
     $conn = new PDO("mysql:host=localhost;dbname=".BASE, USER, PASS);

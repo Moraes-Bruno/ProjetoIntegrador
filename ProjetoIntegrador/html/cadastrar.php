@@ -35,22 +35,39 @@
         </div>
     </header>
 
+
     <section class="fundo_login">
         <div class="box_cadastrar">
-            <div class="form">
+      
+            <form class="form" name="cad-user" action="processarAluno.php" method="POST">
                 <h2>Cadastro</h2>
                 <div class="inputBox">
-                    <input type="text" required="required">
-                    <span>Nome Completo</span>
+                    <input type="text" name="nome"  id="nome" required="required">
+                    <span>Nome</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input type="text" name="sobrenome" id="sobrenome" required="required">
+                    <span>Sobrenome</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="ra" id="ra" required="required">
+                    <span>RA</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="curso" id="curso" required="required">
+                    <span>Curso</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="nascimento" id="nascimento" required="required">
                     <span>Data de Nascimento</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input type="text" name="cpf" id="cpf" required="required">
                     <span>CPF</span>
                     <i></i>
                 </div>
@@ -58,57 +75,57 @@
                     <a href="cadastrarJuridica.php">é pessoa juridica ? cadastre sua empresa</a>
                 </div>
                 <div class="inputBox">
-                    <input type="tel" required="required">
+                    <input type="tel" name="telefone" id="telefone"required="required">
                     <span>Telefone</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="email" required="required">
-                    <span>E-mail</span>
+                    <input type="email" name="email" id="email" required="required">
+                    <span>E-mail institucional</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="password" required="required">
+                    <input type="password" name="senha" id="senha" required="required">
                     <span>Senha</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="text" required="required">
-                    <span>Cep</span>
+                    <input type="text" name="genero" id="genero" required="required">
+                    <span>Genêro</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input type="text" name="endereco" id="endereco" required="required">
                     <span>Endereço</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input type="text" name="numero" id="numero" required="required">
                     <span>Numero</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input type="text" name="complemento" id="complemento" required="required">
                     <span>Complemento</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input type="text" name="bairro" id="bairro" required="required">
                     <span>Bairro</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input type="text" name="cidade" id="cidade" required="required">
                     <span>Cidade</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input type="text" name="estado" id="estado" required="required">
                     <span>Estado</span>
                     <i></i>
                 </div>
-                <input type="submit" value="Criar Cadastro">
-            </div>
+                <input type="submit" value="Criar Cadastro" name="cad_submit">
+            </form>
         </div>
     </section>
 
