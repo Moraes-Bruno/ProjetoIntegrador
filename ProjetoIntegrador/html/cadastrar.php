@@ -95,8 +95,13 @@
                     <i></i>
                 </div>
                 <div class="inputBox">
+                    <input type="text" name="CEP" id="CEP" required="required">
+                    <span>CEP</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
                     <input type="text" name="endereco" id="endereco" required="required">
-                    <span>Endereço</span>
+                    <span>Nome Rua</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
@@ -105,7 +110,7 @@
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="text" name="complemento" id="complemento" required="required">
+                    <input type="text" name="complemento" id="complemento">
                     <span>Complemento</span>
                     <i></i>
                 </div>
