@@ -1,6 +1,6 @@
 <?php
 
-include("pdo.php");
+include("../php/pdo.php");
 
 
 $sql = "SELECT *  FROM vagas INNER JOIN empresas ON vagas.empresa_id = empresas.empresa_id";

@@ -36,7 +36,7 @@
 
     <section class="fundo_login">
         <div class="box_login">
-            <form class="form" action="logar.php" method="POST">
+            <form class="form" action="../php/logar.php" method="POST">
                 <h2>Login</h2>
                 <div class="inputBox">
                     <input type="email" name="email" required="required">

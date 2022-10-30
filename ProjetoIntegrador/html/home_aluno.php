@@ -31,7 +31,7 @@
 
         <div class="navDireita">
             <a href="PerfilAluno.php"><img src="../imgs/Paula_redonda_icone.png" class="imgPerfil"alt="Imagem perfil"></a>
-            <p>Paula Raquel Lima</p>
+            <p><?php echo "" ?></p>
            </div>
     </header>
 

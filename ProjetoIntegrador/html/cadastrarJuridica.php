@@ -36,7 +36,7 @@
 
     <section class="fundo_login">
         <div class="box_cadastrarCpnj">
-            <form class="form" name="cad-user" action="processarCadastro.php" method="POST">
+            <form class="form" name="cad-user" action="../php/processarCadastro.php" method="POST">
                 <h2>Dados Empresa</h2>
                 <div class="inputBox">
                     <input type="text" name="Fantasia" required="required">
