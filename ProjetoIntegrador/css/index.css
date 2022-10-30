@@ -195,7 +195,7 @@ footer img:hover {
 .box_cadastrarCpnj {
   position: relative;
   width: 380px;
-  height: 1880px;
+  height: 1900px;
   background-color: #1c1c1c;
   border-radius: 8px;
   overflow: hidden;
@@ -207,7 +207,7 @@ footer img:hover {
   top: -50%;
   left: -50%;
   width: 380px;
-  height: 1880px;
+  height: 1900px;
   background: linear-gradient(0deg,transparent, #ea1538, #ea1538);
   transform-origin: bottom right;
   animation: animate 6s linear infinite;
@@ -219,7 +219,7 @@ footer img:hover {
   top: -50%;
   left: -50%;
   width: 380px;
-  height: 1880px;
+  height: 1900px;
   background: linear-gradient(0deg,transparent, #ea1538, #ea1538);
   transform-origin: bottom right;
   animation: animate 6s linear infinite;

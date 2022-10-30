@@ -36,40 +36,40 @@
 
     <section class="fundo_login">
         <div class="box_cadastrarCpnj">
-            <div class="form">
+            <form class="form" name="cad-user" action="processarCadastro.php" method="POST">
                 <h2>Dados Empresa</h2>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input type="text" name="Fantasia" required="required">
                     <span>Nome Fantasia</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input type="text" name="Razao" required="required">
                     <span>Razão Social</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="email" required="required">
+                    <input type="email" name="email_empresa" required="required">
                     <span>Email Empresa</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="tel" required="required">
+                    <input type="tel" name="Telefone_empresa" required="required">
                     <span>Telefone Empresa</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input type="text" name="CNPJ" required="required">
                     <span>CNPJ</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input type="text" name="ie" required="required">
                     <span>Inscrição Estadual</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="password" required="required">
+                    <input type="password" name="senha" required="required">
                     <span>Senha</span>
                     <i></i>
                 </div>
@@ -78,27 +78,32 @@
                 <h2>Dados Pessoais</h2>
 
                 <div class="inputBox">
-                    <input type="text" required="required">
-                    <span>Nome Completo</span>
+                    <input type="text" name="nome" required="required">
+                    <span>Nome</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input type="text" name="sobrenome" required="required">
+                    <span>Sobrenome</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="nascimento" required="required">
                     <span>Data de Nascimento</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input type="text" name="cpf" required="required">
                     <span>CPF</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="tel" required="required">
+                    <input type="tel" name="telefone" required="required">
                     <span>Telefone</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="email" required="required">
+                    <input type="email" name="email"  required="required">
                     <span>E-mail</span>
                     <i></i>
                 </div>
@@ -107,42 +112,42 @@
                 <h2>Endereço</h2>
 
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input type="text" name="CEP" required="required">
                     <span>Cep</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input type="text" name="endereco" required="required">
                     <span>Endereço</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input type="text" name="numero" required="required">
                     <span>Numero</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input type="text" name="complemento" required="required">
                     <span>Complemento</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input type="text" name="bairro" required="required">
                     <span>Bairro</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input type="text" name="cidade" required="required">
                     <span>Cidade</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input type="text" name="estado" required="required">
                     <span>Estado</span>
                     <i></i>
                 </div>
                 <input type="submit" value="Criar Cadastro">
-            </div>
+            </form>
         </div>
     </section>
 

@@ -2,7 +2,7 @@
 
 class Usuario{
 
-    public function validarLogin($email,$senha){
+    public function validarLogin($email,$senha, $email_empresa){
         global $conn;
 
         $sqlaluno = "SELECT * FROM  alunos where email_inst = :email and senha = :senha";
@@ -11,9 +11,9 @@ class Usuario{
         $sqlaluno->bindValue("senha", $senha);
         $sqlaluno->execute();
 
-        $sqlempresa = "SELECT * FROM  empresas where email_corporativo = :email and senha = :senha";
+        $sqlempresa = "SELECT * FROM  empresas where email_corporativo = :email_empresa and senha = :senha";
         $sqlempresa = $conn->prepare($sqlempresa);
-        $sqlempresa->bindValue("email", $email);
+        $sqlempresa->bindValue("email_empresa", $email_empresa);
         $sqlempresa->bindValue("senha", $senha);
         $sqlempresa->execute();
 
