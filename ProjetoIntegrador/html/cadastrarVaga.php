@@ -57,26 +57,27 @@
 
                 <label for="cidade">Cidade da vaga</label>
                 <input type="text" name="cidade" id="cidade">
-
-                <input id="cadastrar" type="submit" value="Salvar">
             </form>
+            <form class="direita" form action="../php/vagasCadastro.php" class="formulario" method="POST">
+                    <p id="bio">Descrição</p>
+                    <textarea class="campoDireita"name="Biografia" id="Biografia" cols="30" rows="10"></textarea>
+                    <p>Requisitos</p>
+                    <textarea class="campoDireita"name="experiencia" id="experiencia" cols="30" rows="10"></textarea>
+                    <p>Benefícios</p>
+                    <textarea class="campoDireita"name="links" id="links" cols="30" rows="10"></textarea>
+                </form>
 
-            <!--<form class="direita" action="../php/vagasCadastro.php" class="formulario" method="POST">
-
-                <p id="bio">Descrição</p>
-                <textarea class="campoDireita"name="Biografia" id="Biografia" cols="30" rows="10"></textarea>
-
-                <p>Requisitos</p>
-                <textarea class="campoDireita"name="experiencia" id="experiencia" cols="30" rows="10"></textarea>
-
-                <p>Benefícios</p>
-                <textarea class="campoDireita"name="links" id="links" cols="30" rows="10"></textarea>
-            </form>-->
             
-            <!--<form class="botoes" action="../php/vagasCadastro.php" class="formulario" method="POST">
+
+            
+
+              
+          
+            
+            <div class="botoes" action="../php/vagasCadastro.php" class="formulario" method="POST">
                 <input id="cancelar" type="button" value="Cancelar">
                 <input id="cadastrar" type="submit" value="Salvar">
-            </form>-->
+            </div>
 
         </main>
         

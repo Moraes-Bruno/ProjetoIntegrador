@@ -34,10 +34,8 @@ main{
     justify-content: center;
     gap: 1em;
     padding: 1em;
-    margin-right: 1em;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    
+    grid-column-start: 2 ;
+    grid-column-end: 3;    
 }
 
 .direita p{
