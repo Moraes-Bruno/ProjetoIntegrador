@@ -32,49 +32,51 @@
         <main>
 
 
-            <form action="post" class="formulario">
+            <form action="../php/vagasCadastro.php" class="formulario" method="POST">
 
                 <label for="nome">Nome da Vaga</label>
-                <input type="text" name="nome">
+                <input type="text" name="nome" id="nome">
 
                 <label for="nivel">Nivel da vaga</label>
-                <input type="text" name="nivel">
+                <input type="text" name="nivel" id="nivel">
 
                 <label for="modelo">Modelo de contratação</label>
-                <input type="text" name="modelo">
+                <input type="text" name="modelo" id="modelo">
 
                 <label for="abertura">Data de abertura</label>
-                <input type="date" name="abertura">
+                <input type="date" name="abertura" id="abertura">
 
                 <label for="fechamento">Data de fechamento</label>
-                <input type="date" name="fechemento">
+                <input type="date" name="fechemento" id="fechemento">
 
                 <label for="modalidade">Modalidade de trabalho</label>
-                <input type="text" name="modalidade">
+                <input type="text" name="modalidade" id="modalidade">
 
                 <label for="salario">Salário</label>
-                <input type="text" name="salario">
+                <input type="text" name="salario" id="salario">
 
                 <label for="cidade">Cidade da vaga</label>
-                <input type="text" name="cidade">
+                <input type="text" name="cidade" id="cidade">
+
+                <input id="cadastrar" type="submit" value="Salvar">
             </form>
 
-            <div class="direita">
+            <!--<form class="direita" action="../php/vagasCadastro.php" class="formulario" method="POST">
 
                 <p id="bio">Descrição</p>
-                <textarea class="campoDireita"name="Biografia" cols="30" rows="10"></textarea>
+                <textarea class="campoDireita"name="Biografia" id="Biografia" cols="30" rows="10"></textarea>
 
                 <p>Requisitos</p>
-                <textarea class="campoDireita"name="experiencia" cols="30" rows="10"></textarea>
+                <textarea class="campoDireita"name="experiencia" id="experiencia" cols="30" rows="10"></textarea>
 
                 <p>Benefícios</p>
-                <textarea class="campoDireita"name="links" cols="30" rows="10"></textarea>
-            </div>
+                <textarea class="campoDireita"name="links" id="links" cols="30" rows="10"></textarea>
+            </form>-->
             
-            <div class="botoes">
+            <!--<form class="botoes" action="../php/vagasCadastro.php" class="formulario" method="POST">
                 <input id="cancelar" type="button" value="Cancelar">
-                <input id="cadastrar" type="button" value="Salvar">
-            </div>
+                <input id="cadastrar" type="submit" value="Salvar">
+            </form>-->
 
         </main>
         
@@ -90,26 +92,6 @@
                 <p id="cidade"> <img src="../imgs/pointer.png" alt="pointer"> Cidade</p>
                 <a href="#">Alterar Vaga</a>
         </div>
-
-        <div class="minhas_vagas">
-            <div class="vaga">
-                <h2>Nome Vaga</h2>
-                <p>Descrição da vaga </p>
-                <div class="data"><img src="../imgs/tempo.png" alt="relogio"><p>dd/mm/yyyy</p></div>
-                <p id="cidade"> <img src="../imgs/pointer.png" alt="pointer"> Cidade</p>
-                <a href="#">Alterar Vaga</a>
-
-            </div>
-
-            <div class="minhas_vagas">
-            <div class="vaga">
-                <h2>Nome Vaga</h2>
-                <p>Descrição da vaga </p>
-                <div class="data"><img src="../imgs/tempo.png" alt="relogio"><p>dd/mm/yyyy</p></div>
-                <p id="cidade"> <img src="../imgs/pointer.png" alt="pointer"> Cidade</p>
-                <a href="#">Alterar Vaga</a>
-
-            </div>
 
         </div>
 

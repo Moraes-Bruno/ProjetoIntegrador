@@ -14,10 +14,6 @@ $res = $res->fetchAll();
 ?>
 
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
