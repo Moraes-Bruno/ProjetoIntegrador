@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 02-Nov-2022 às 16:09
+-- Tempo de geração: 02-Nov-2022 às 20:49
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.6
 
@@ -44,14 +44,15 @@ CREATE TABLE `alunos` (
   `RA` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
   `senha` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `cpf` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Extraindo dados da tabela `alunos`
 --
 
 INSERT INTO `alunos` (`IDaluno`, `nome`, `sobrenome`, `resumo_experiencia`, `foto_perfil`, `email_inst`, `regiao_interesse`, `data_nascimento`, `genero`, `modalidade_preferencia`, `id_curso`, `biografia`, `competencias`, `RA`, `senha`, `cpf`) VALUES
-(4, 'bb', 'bb', NULL, NULL, 'aluno@a', NULL, 'bb', 'bb', NULL, 0, NULL, NULL, 'bb', 'aa', 'bb');
+(4, 'bb', 'bb', NULL, NULL, 'aluno@a', NULL, 'bb', 'bb', NULL, 0, NULL, NULL, 'bb', 'aa', 'bb'),
+(5, 'luan', 'garcia', NULL, NULL, 'aluno@teste', NULL, '21/06/20', 'masculino', NULL, 0, NULL, NULL, '123456', '123', '123456');
 
 -- --------------------------------------------------------
 
@@ -63,17 +64,19 @@ CREATE TABLE `bairros` (
   `IDbairro` int(11) NOT NULL,
   `nome_bairro` varchar(60) NOT NULL,
   `cidade_id` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `bairros`
 --
 
 INSERT INTO `bairros` (`IDbairro`, `nome_bairro`, `cidade_id`) VALUES
-(8, 'aa', 0),
-(7, 'gg', 0),
+(5, 'aa', 0),
 (6, 'bb', 0),
-(5, 'aa', 0);
+(7, 'gg', 0),
+(8, 'aa', 0),
+(9, 'bairro do teste', 0),
+(10, 'empresarial', 0);
 
 -- --------------------------------------------------------
 
@@ -85,17 +88,19 @@ CREATE TABLE `cidades` (
   `IDcidade` int(11) NOT NULL,
   `nome` varchar(120) NOT NULL,
   `estado` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `cidades`
 --
 
 INSERT INTO `cidades` (`IDcidade`, `nome`, `estado`) VALUES
-(8, 'aa', 'aa'),
-(7, 'gg', 'gg'),
+(5, 'aa', 'aa'),
 (6, 'bb', 'bb'),
-(5, 'aa', 'aa');
+(7, 'gg', 'gg'),
+(8, 'aa', 'aa'),
+(9, 'itapira', 'sp'),
+(10, 'itapira', 'sp');
 
 -- --------------------------------------------------------
 
@@ -107,14 +112,15 @@ CREATE TABLE `cursos` (
   `IDcurso` int(11) NOT NULL,
   `nome_curso` varchar(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `periodo` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `cursos`
 --
 
 INSERT INTO `cursos` (`IDcurso`, `nome_curso`, `periodo`) VALUES
-(4, 'bb', '');
+(4, 'bb', ''),
+(5, 'dsm', '');
 
 -- --------------------------------------------------------
 
@@ -138,7 +144,7 @@ CREATE TABLE `empresas` (
   `cpf` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `telefone` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `empresas`
@@ -147,7 +153,8 @@ CREATE TABLE `empresas` (
 INSERT INTO `empresas` (`IDempresa`, `nome_empresa`, `razao_social`, `cnpj`, `id_endereco`, `email_corporativo`, `foto_perfil`, `web`, `senha`, `Nome`, `Sobrenome`, `data_nascimento`, `cpf`, `telefone`, `email`) VALUES
 (2, 'aa', 'aa', 'aa', 0, 'empresa@a', '', '', 'aa', 'aa', 'aa', 'aa', 'aa', 'aa', 'aa@aa'),
 (3, 'gg', 'gg', 'gg', 0, 'gg@gg', '', '', 'gg', 'gg', 'gg', 'gg', 'gg', 'gg', 'gg@tt'),
-(4, 'aa', 'aa', 'aaa', 0, 'aa@ttt', '', '', 'aa', 'aa', 'aa', 'aa', 'aa', 'aa', 'aa@rr');
+(4, 'aa', 'aa', 'aaa', 0, 'aa@ttt', '', '', 'aa', 'aa', 'aa', 'aa', 'aa', 'aa', 'aa@rr'),
+(5, 'desenvolve', 'desenvolve', '124561', 0, 'empresa@teste', '', '', '123', 'luan', 'garcia', '123', '13142', '123456', 'empresa@teste2');
 
 -- --------------------------------------------------------
 
@@ -162,17 +169,19 @@ CREATE TABLE `enderecos` (
   `cep_rua` varchar(9) NOT NULL,
   `bairro_id` int(11) NOT NULL,
   `complemento` varchar(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `enderecos`
 --
 
 INSERT INTO `enderecos` (`IDendereco`, `nome`, `numero`, `cep_rua`, `bairro_id`, `complemento`) VALUES
-(8, 'aa', 'aa', 'aa', 0, 'aa'),
-(7, 'gg', 'gg', 'gg', 0, 'gg'),
+(5, 'aa', 'aa', 'aa', 0, 'aa'),
 (6, 'bb', 'bb', 'bb', 0, 'bb'),
-(5, 'aa', 'aa', 'aa', 0, 'aa');
+(7, 'gg', 'gg', 'gg', 0, 'gg'),
+(8, 'aa', 'aa', 'aa', 0, 'aa'),
+(9, '1234899', 'rua do test', '855', 0, 'casa'),
+(10, '123', 'rua empresa', '123', 0, 'casa');
 
 -- --------------------------------------------------------
 
@@ -183,7 +192,7 @@ INSERT INTO `enderecos` (`IDendereco`, `nome`, `numero`, `cep_rua`, `bairro_id`,
 CREATE TABLE `endereco_alunos` (
   `Aluno_id` int(11) NOT NULL,
   `endereco_id` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -194,7 +203,7 @@ CREATE TABLE `endereco_alunos` (
 CREATE TABLE `endereco_empresa` (
   `id_empresa` int(11) DEFAULT NULL,
   `id_endereco` int(11) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -206,7 +215,7 @@ CREATE TABLE `idiomas` (
   `IDidioma` int(11) NOT NULL,
   `idioma` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `aluno_id` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -218,7 +227,7 @@ CREATE TABLE `links` (
   `IDlink` int(11) NOT NULL,
   `link` varchar(2048) NOT NULL,
   `id_aluno` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -229,17 +238,19 @@ CREATE TABLE `links` (
 CREATE TABLE `telefones` (
   `IDtelefone` int(11) NOT NULL,
   `telefone` varchar(20) CHARACTER SET utf32 COLLATE utf32_unicode_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `telefones`
 --
 
 INSERT INTO `telefones` (`IDtelefone`, `telefone`) VALUES
-(8, 'aa'),
-(7, 'gg'),
+(5, 'aa'),
 (6, 'bb'),
-(5, 'aa');
+(7, 'gg'),
+(8, 'aa'),
+(9, '789456'),
+(10, '141234');
 
 -- --------------------------------------------------------
 
@@ -250,7 +261,7 @@ INSERT INTO `telefones` (`IDtelefone`, `telefone`) VALUES
 CREATE TABLE `telefone_alunos` (
   `id_telefone` int(11) NOT NULL,
   `idAluno` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `telefone_alunos`
@@ -271,7 +282,7 @@ INSERT INTO `telefone_alunos` (`id_telefone`, `idAluno`) VALUES
 CREATE TABLE `telefone_empresas` (
   `ID_telefone` int(11) NOT NULL,
   `ID_empresa` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `telefone_empresas`
@@ -302,7 +313,7 @@ CREATE TABLE `vagas` (
   `descricao` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `experiencia` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `links` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `vagas`
@@ -417,37 +428,37 @@ ALTER TABLE `vagas`
 -- AUTO_INCREMENT de tabela `alunos`
 --
 ALTER TABLE `alunos`
-  MODIFY `IDaluno` int(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `IDaluno` int(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `bairros`
 --
 ALTER TABLE `bairros`
-  MODIFY `IDbairro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `IDbairro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de tabela `cidades`
 --
 ALTER TABLE `cidades`
-  MODIFY `IDcidade` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `IDcidade` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de tabela `cursos`
 --
 ALTER TABLE `cursos`
-  MODIFY `IDcurso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `IDcurso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `empresas`
 --
 ALTER TABLE `empresas`
-  MODIFY `IDempresa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `IDempresa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `enderecos`
 --
 ALTER TABLE `enderecos`
-  MODIFY `IDendereco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `IDendereco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de tabela `idiomas`
@@ -465,7 +476,7 @@ ALTER TABLE `links`
 -- AUTO_INCREMENT de tabela `telefones`
 --
 ALTER TABLE `telefones`
-  MODIFY `IDtelefone` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `IDtelefone` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de tabela `vagas`

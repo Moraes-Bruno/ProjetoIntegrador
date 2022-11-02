@@ -1,9 +1,12 @@
 <?php
 
-include("../php/pdo.php");
+require '../php/verifica.php';
 
+if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])): ?>
 
-$sql = "SELECT * FROM vagas INNER JOIN empresas ON vagas.empresa_id = empresas.empresa_id";
+<?php 
+
+$sql = "SELECT * FROM vagas INNER JOIN empresas ON vagas.empresa_id = empresas.IDempresa";
 
 $res = $conn->prepare($sql);
 $res->execute();
@@ -12,6 +15,7 @@ $res->execute();
 //$qtd = $res->num_rows;
 
 $res = $res->fetchAll();
+
 ?>
 
 
@@ -149,3 +153,5 @@ $res = $res->fetchAll();
 </body>
 
 </html>
+
+<?php else: header("Location: ../html/index.html"); endif;?>

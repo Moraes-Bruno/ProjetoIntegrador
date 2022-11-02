@@ -1,3 +1,9 @@
+<?php
+
+require '../php/verifica.php';
+
+if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])): ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,21 +18,23 @@
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
-    <header>
+<header>
         <a href="home_aluno.php" class="logo">Fatec<span> Vagas</span></a>
         <div class="bx bx-menu" id="menu-icon"></div>
 
         <ul class="navlist">
-            <li><a href="home_aluno.php">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="cadastrarVaga.php">Home</a></li>
             <li><a href="vagas.php">Vagas</a></li>
+            <li><a href="#">Minhas Vagas</a></li>
         </ul>
 
         <div class="navDireita">
             <a href="PerfilAluno.php"><img src="../imgs/Paula_redonda_icone.png" class="imgPerfil"alt="Imagem perfil"></a>
-            <p>Paula Raquel Lima</p>
+            <p><?php echo $nome;?></p>
+            <div class="h-btn">
+                <a href="login.php" class="sign-in">Sair</a>    
+            </div>
         </div>
+        
     </header>
 
         <main>
@@ -110,3 +118,5 @@
 <script type="text/javascript" src="../js/Nav.js"></script>
 </body>
 </html>
+
+<?php else: header("Location: ../html/index.html"); endif;?>

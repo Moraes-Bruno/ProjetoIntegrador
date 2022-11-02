@@ -30,11 +30,11 @@ if(isset($_SESSION['idempresa']) && !empty($_SESSION['idempresa'])): ?>
 
         <ul class="navlist">
             <li><a href="vagas.php">Vagas</a></li>
-            <li><a href="#">Minhas Vagas</a></li>
+            <li><a href="cadastrarVaga.php">Minhas Vagas</a></li>
         </ul>
 
         <div class="navDireita">
-            <a href="PerfilAluno.php"><img src="../imgs/Paula_redonda_icone.png" class="imgPerfil"alt="Imagem perfil"></a>
+            <a href="perfil_empresa.php"><img src="../imgs/Paula_redonda_icone.png" class="imgPerfil"alt="Imagem perfil"></a>
             <p><?php echo $nome?></p>
             <div class="h-btn">
                 <a href="../php/logoutjuridica.php" class="sign-in">Sair</a>    
