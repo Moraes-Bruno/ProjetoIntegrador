@@ -32,52 +32,46 @@
         <main>
 
 
-            <form action="../php/vagasCadastro.php" class="formulario" method="POST">
+            <form action="../php/vagasCadastro.php"  method="POST">
+                <div class="formulario">
+                    <label for="nome">Nome da Vaga</label>
+                    <input type="text" name="nome" id="nome">
 
-                <label for="nome">Nome da Vaga</label>
-                <input type="text" name="nome" id="nome">
+                    <label for="nivel">Nivel da vaga</label>
+                    <input type="text" name="nivel" id="nivel">
 
-                <label for="nivel">Nivel da vaga</label>
-                <input type="text" name="nivel" id="nivel">
+                    <label for="modelo">Modelo de contratação</label>
+                    <input type="text" name="modelo" id="modelo">
 
-                <label for="modelo">Modelo de contratação</label>
-                <input type="text" name="modelo" id="modelo">
+                    <label for="abertura">Data de abertura</label>
+                    <input type="date" name="abertura" id="abertura">
 
-                <label for="abertura">Data de abertura</label>
-                <input type="date" name="abertura" id="abertura">
+                    <label for="fechamento">Data de fechamento</label>
+                    <input type="date" name="fechemento" id="fechemento">
 
-                <label for="fechamento">Data de fechamento</label>
-                <input type="date" name="fechemento" id="fechemento">
+                    <label for="modalidade">Modalidade de trabalho</label>
+                    <input type="text" name="modalidade" id="modalidade">
 
-                <label for="modalidade">Modalidade de trabalho</label>
-                <input type="text" name="modalidade" id="modalidade">
+                    <label for="salario">Salário</label>
+                    <input type="text" name="salario" id="salario">
 
-                <label for="salario">Salário</label>
-                <input type="text" name="salario" id="salario">
-
-                <label for="cidade">Cidade da vaga</label>
-                <input type="text" name="cidade" id="cidade">
-            </form>
-            <form class="direita" form action="../php/vagasCadastro.php" class="formulario" method="POST">
+                    <label for="cidade">Cidade da vaga</label>
+                    <input type="text" name="cidade" id="cidade">
+                </div>
+                <div class="direita">
                     <p id="bio">Descrição</p>
                     <textarea class="campoDireita"name="Biografia" id="Biografia" cols="30" rows="10"></textarea>
                     <p>Requisitos</p>
                     <textarea class="campoDireita"name="experiencia" id="experiencia" cols="30" rows="10"></textarea>
                     <p>Benefícios</p>
                     <textarea class="campoDireita"name="links" id="links" cols="30" rows="10"></textarea>
-                </form>
+                </div>
+                <div>
+                    <input id="cancelar" type="button" value="Cancelar">
+                    <input id="cadastrar" type="submit" value="Salvar">
+                </div>
+            </form>
 
-            
-
-            
-
-              
-          
-            
-            <div class="botoes" action="../php/vagasCadastro.php" class="formulario" method="POST">
-                <input id="cancelar" type="button" value="Cancelar">
-                <input id="cadastrar" type="submit" value="Salvar">
-            </div>
 
         </main>
         

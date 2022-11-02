@@ -3,7 +3,7 @@
 include("../php/pdo.php");
 
 
-$sql = "SELECT *  FROM vagas INNER JOIN empresas ON vagas.empresa_id = empresas.empresa_id";
+$sql = "SELECT * FROM vagas INNER JOIN empresas ON vagas.empresa_id = empresas.empresa_id";
 
 $res = $conn->prepare($sql);
 $res->execute();
