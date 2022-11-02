@@ -30,10 +30,8 @@ if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])): ?>
         <div class="bx bx-menu" id="menu-icon"></div>
 
         <ul class="navlist">
-            <li><a href="home_aluno.php">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
             <li><a href="vagas.php">Vagas</a></li>
+            <li><a href="#">Minhas Vagas</a></li>
         </ul>
 
         <div class="navDireita">

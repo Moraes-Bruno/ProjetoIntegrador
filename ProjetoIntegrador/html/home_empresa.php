@@ -29,10 +29,8 @@ if(isset($_SESSION['idempresa']) && !empty($_SESSION['idempresa'])): ?>
         <div class="bx bx-menu" id="menu-icon"></div>
 
         <ul class="navlist">
-            <li><a href="home_aluno.php">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
             <li><a href="vagas.php">Vagas</a></li>
+            <li><a href="#">Minhas Vagas</a></li>
         </ul>
 
         <div class="navDireita">

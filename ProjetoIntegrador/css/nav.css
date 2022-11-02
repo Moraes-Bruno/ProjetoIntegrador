@@ -111,8 +111,9 @@
   }
 
   .imgPerfil{
-    width: 3rem;
-    height: 3rem;
+    border-radius: 30px;
+    width: 2rem;
+    height: 2rem;
   }
 
    /*----Começo footer----*/
