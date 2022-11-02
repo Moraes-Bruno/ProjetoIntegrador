@@ -48,5 +48,23 @@ class Usuario{
         }
 
     }
+
+    public function logged($id){
+        global $conn;
+
+        $array = array();
+
+        $sqlaluno = "SELECT nome FROM alunos WHERE IDaluno = :idusuario";
+        $sqlaluno = $conn->prepare($sqlaluno);
+        $sqlaluno->bindValue("idusuario", $id);
+        $sqlaluno->execute();
+        
+
+        if($sqlaluno->rowCount() > 0){
+            $array = $sqlaluno->fetch();
+        }
+
+        return $array;
+    }
 }
 

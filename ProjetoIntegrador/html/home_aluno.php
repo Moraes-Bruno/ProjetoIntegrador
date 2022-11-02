@@ -1,6 +1,6 @@
 <?php
 
-require '../php/pdo.php';
+require '../php/verifica.php';
 
 if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])): ?>
 
@@ -38,7 +38,7 @@ if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])): ?>
 
         <div class="navDireita">
             <a href="PerfilAluno.php"><img src="../imgs/Paula_redonda_icone.png" class="imgPerfil"alt="Imagem perfil"></a>
-            <p>Paula Raquel Lima</p>
+            <p><?php echo $nome;?></p>
             <div class="h-btn">
                 <a href="login.php" class="sign-in">Sair</a>    
             </div>
@@ -51,7 +51,7 @@ if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])): ?>
     <section class="home" id="home">
         <div class="home-text">
             <h1>Bem-Vindo a <br> <span>Fatec</span></h1>
-            <h4>Paula Raquel Lima</h4>
+            <h4><?php echo $nome;?></h4>
             <a href="vagas.php" class="btn">Saiba Mais</a>
         </div>
     </section>
