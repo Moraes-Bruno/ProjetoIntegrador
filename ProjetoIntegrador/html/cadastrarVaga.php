@@ -35,39 +35,39 @@
             <form action="../php/vagasCadastro.php"  method="POST">
                 <div class="formulario">
                     <label for="nome">Nome da Vaga</label>
-                    <input type="text" name="nome" id="nome">
+                    <input type="text" name="nome" id="nome" required="required">
 
                     <label for="nivel">Nivel da vaga</label>
-                    <input type="text" name="nivel" id="nivel">
+                    <input type="text" name="nivel" id="nivel" required="required">
 
                     <label for="modelo">Modelo de contratação</label>
-                    <input type="text" name="modelo" id="modelo">
+                    <input type="text" name="modelo" id="modelo" required="required">
 
                     <label for="abertura">Data de abertura</label>
-                    <input type="date" name="abertura" id="abertura">
+                    <input type="date" name="abertura" id="abertura" required="required">
 
                     <label for="fechamento">Data de fechamento</label>
-                    <input type="date" name="fechemento" id="fechemento">
+                    <input type="date" name="fechemento" id="fechemento" required="required">
 
                     <label for="modalidade">Modalidade de trabalho</label>
-                    <input type="text" name="modalidade" id="modalidade">
+                    <input type="text" name="modalidade" id="modalidade" required="required">
 
                     <label for="salario">Salário</label>
-                    <input type="text" name="salario" id="salario">
+                    <input type="text" name="salario" id="salario" required="required">
 
                     <label for="cidade">Cidade da vaga</label>
-                    <input type="text" name="cidade" id="cidade">
+                    <input type="text" name="cidade" id="cidade" required="required">
                 </div>
                 <div class="direita">
                     <p id="bio">Descrição</p>
-                    <textarea class="campoDireita"name="Biografia" id="Biografia" cols="30" rows="10"></textarea>
+                    <textarea class="campoDireita"name="Biografia" id="Biografia" cols="30" rows="10" required="required"></textarea>
                     <p>Requisitos</p>
-                    <textarea class="campoDireita"name="experiencia" id="experiencia" cols="30" rows="10"></textarea>
+                    <textarea class="campoDireita"name="experiencia" id="experiencia" cols="30" rows="10" required="required"></textarea>
                     <p>Benefícios</p>
-                    <textarea class="campoDireita"name="links" id="links" cols="30" rows="10"></textarea>
+                    <textarea class="campoDireita"name="links" id="links" cols="30" rows="10" required="required"></textarea>
                 </div>
-                <div>
-                    <input id="cancelar" type="button" value="Cancelar">
+                <div class="botoes">
+                    <input id="cancelar" type="button" value="Cancelar" >
                     <input id="cadastrar" type="submit" value="Salvar">
                 </div>
             </form>
