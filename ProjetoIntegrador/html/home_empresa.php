@@ -32,7 +32,10 @@
         <div class="navDireita">
             <a href="PerfilAluno.php"><img src="../imgs/Paula_redonda_icone.png" class="imgPerfil"alt="Imagem perfil"></a>
             <p>Empresa nome</p>
-           </div>
+            <div class="h-btn">
+                <a href="../php/logout.php" class="sign-in">Sair</a>    
+            </div>
+        </div>
     </header>
 
     <!-- Home section-->

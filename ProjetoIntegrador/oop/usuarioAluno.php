@@ -14,10 +14,9 @@ class Usuario{
         if($sqlaluno->rowCount() > 0){
             $dado = $sqlaluno->fetch();
 
-            $_SESSION['idaluno'] = $dado['IDaluno'];
+            $_SESSION['idUser'] = $dado['IDaluno'];
 
             return true;
-            
         }
         else{
             return false;

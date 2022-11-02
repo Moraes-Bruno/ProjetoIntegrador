@@ -11,8 +11,8 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['senha']) &
     $senha = addslashes($_POST['senha']);
 
     if($usuario->validarLogin($email,$senha) == true){
-        if(isset($_SESSION['idaluno'])){
-            echo $_SESSION['idaluno'];
+        if(isset($_SESSION['idUser'])){
+            echo $_SESSION['idUser'];
             header("Location: ../html/home_aluno.php");
         }
         else{

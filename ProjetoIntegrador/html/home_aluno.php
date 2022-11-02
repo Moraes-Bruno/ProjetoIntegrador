@@ -1,3 +1,10 @@
+<?php
+
+require '../php/pdo.php';
+
+if(isset($_SESSION['idaluno']) && !empty($_SESSION['idaluno'])): ?>
+
+
 <!DOCTYPE html> 
 <html lang="pt-br">
 
@@ -31,8 +38,12 @@
 
         <div class="navDireita">
             <a href="PerfilAluno.php"><img src="../imgs/Paula_redonda_icone.png" class="imgPerfil"alt="Imagem perfil"></a>
-            <p><?php echo "" ?></p>
-           </div>
+            <p>Paula Raquel Lima</p>
+            <div class="h-btn">
+                <a href="login.php" class="sign-in">Sair</a>    
+            </div>
+        </div>
+        
     </header>
 
     <!-- Home section-->
@@ -56,5 +67,5 @@
 </html>
 
 
-
+<?php else: header("Location: ../html/login.php"); endif;?>
 
