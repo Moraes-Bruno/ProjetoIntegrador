@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 30-Out-2022 às 18:13
+-- Tempo de geração: 02-Nov-2022 às 16:09
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.6
 
@@ -51,7 +51,7 @@ CREATE TABLE `alunos` (
 --
 
 INSERT INTO `alunos` (`IDaluno`, `nome`, `sobrenome`, `resumo_experiencia`, `foto_perfil`, `email_inst`, `regiao_interesse`, `data_nascimento`, `genero`, `modalidade_preferencia`, `id_curso`, `biografia`, `competencias`, `RA`, `senha`, `cpf`) VALUES
-(4, 'bb', 'bb', NULL, NULL, 'bb@bb', NULL, 'bb', 'bb', NULL, 0, NULL, NULL, 'bb', 'bb', 'bb');
+(4, 'bb', 'bb', NULL, NULL, 'aluno@a', NULL, 'bb', 'bb', NULL, 0, NULL, NULL, 'bb', 'aa', 'bb');
 
 -- --------------------------------------------------------
 
@@ -70,6 +70,7 @@ CREATE TABLE `bairros` (
 --
 
 INSERT INTO `bairros` (`IDbairro`, `nome_bairro`, `cidade_id`) VALUES
+(8, 'aa', 0),
 (7, 'gg', 0),
 (6, 'bb', 0),
 (5, 'aa', 0);
@@ -91,6 +92,7 @@ CREATE TABLE `cidades` (
 --
 
 INSERT INTO `cidades` (`IDcidade`, `nome`, `estado`) VALUES
+(8, 'aa', 'aa'),
 (7, 'gg', 'gg'),
 (6, 'bb', 'bb'),
 (5, 'aa', 'aa');
@@ -143,8 +145,9 @@ CREATE TABLE `empresas` (
 --
 
 INSERT INTO `empresas` (`IDempresa`, `nome_empresa`, `razao_social`, `cnpj`, `id_endereco`, `email_corporativo`, `foto_perfil`, `web`, `senha`, `Nome`, `Sobrenome`, `data_nascimento`, `cpf`, `telefone`, `email`) VALUES
-(2, 'aa', 'aa', 'aa', 0, 'aa@aaa', '', '', 'aa', 'aa', 'aa', 'aa', 'aa', 'aa', 'aa@aa'),
-(3, 'gg', 'gg', 'gg', 0, 'gg@gg', '', '', 'gg', 'gg', 'gg', 'gg', 'gg', 'gg', 'gg@tt');
+(2, 'aa', 'aa', 'aa', 0, 'empresa@a', '', '', 'aa', 'aa', 'aa', 'aa', 'aa', 'aa', 'aa@aa'),
+(3, 'gg', 'gg', 'gg', 0, 'gg@gg', '', '', 'gg', 'gg', 'gg', 'gg', 'gg', 'gg', 'gg@tt'),
+(4, 'aa', 'aa', 'aaa', 0, 'aa@ttt', '', '', 'aa', 'aa', 'aa', 'aa', 'aa', 'aa', 'aa@rr');
 
 -- --------------------------------------------------------
 
@@ -166,6 +169,7 @@ CREATE TABLE `enderecos` (
 --
 
 INSERT INTO `enderecos` (`IDendereco`, `nome`, `numero`, `cep_rua`, `bairro_id`, `complemento`) VALUES
+(8, 'aa', 'aa', 'aa', 0, 'aa'),
 (7, 'gg', 'gg', 'gg', 0, 'gg'),
 (6, 'bb', 'bb', 'bb', 0, 'bb'),
 (5, 'aa', 'aa', 'aa', 0, 'aa');
@@ -232,6 +236,7 @@ CREATE TABLE `telefones` (
 --
 
 INSERT INTO `telefones` (`IDtelefone`, `telefone`) VALUES
+(8, 'aa'),
 (7, 'gg'),
 (6, 'bb'),
 (5, 'aa');
@@ -294,8 +299,17 @@ CREATE TABLE `vagas` (
   `modalidade_de_trabalho` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `cidade_vaga` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `empresa_id` int(11) NOT NULL,
-  `descricao` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+  `descricao` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `experiencia` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `links` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `vagas`
+--
+
+INSERT INTO `vagas` (`IDvaga`, `nome_vaga`, `salario`, `nivel_vaga`, `data_abertura`, `data_fechamento`, `modelo_contrataco`, `modalidade_de_trabalho`, `cidade_vaga`, `empresa_id`, `descricao`, `experiencia`, `links`) VALUES
+(2, 'aa', 0, 'aa', '2022-11-02', '2022-11-18', 'aa', 'aa', 'aa', 0, 'aa', 'aa', 'aa');
 
 --
 -- Índices para tabelas despejadas
@@ -409,13 +423,13 @@ ALTER TABLE `alunos`
 -- AUTO_INCREMENT de tabela `bairros`
 --
 ALTER TABLE `bairros`
-  MODIFY `IDbairro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `IDbairro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de tabela `cidades`
 --
 ALTER TABLE `cidades`
-  MODIFY `IDcidade` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `IDcidade` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de tabela `cursos`
@@ -427,13 +441,13 @@ ALTER TABLE `cursos`
 -- AUTO_INCREMENT de tabela `empresas`
 --
 ALTER TABLE `empresas`
-  MODIFY `IDempresa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `IDempresa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `enderecos`
 --
 ALTER TABLE `enderecos`
-  MODIFY `IDendereco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `IDendereco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de tabela `idiomas`
@@ -451,13 +465,13 @@ ALTER TABLE `links`
 -- AUTO_INCREMENT de tabela `telefones`
 --
 ALTER TABLE `telefones`
-  MODIFY `IDtelefone` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `IDtelefone` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de tabela `vagas`
 --
 ALTER TABLE `vagas`
-  MODIFY `IDvaga` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `IDvaga` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
