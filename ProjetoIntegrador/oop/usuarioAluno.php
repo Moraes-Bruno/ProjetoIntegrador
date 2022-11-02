@@ -66,5 +66,23 @@ class Usuario{
 
         return $array;
     }
+
+    public function loggedEmpresa($id){
+        global $conn;
+
+        $array = array();
+
+        $sqlaluno = "SELECT nome_empresa  FROM empresas WHERE IDempresa = :idusuario";
+        $sqlaluno = $conn->prepare($sqlaluno);
+        $sqlaluno->bindValue("idusuario", $id);
+        $sqlaluno->execute();
+        
+
+        if($sqlaluno->rowCount() > 0){
+            $array = $sqlaluno->fetch();
+        }
+
+        return $array;
+    }
 }
 
