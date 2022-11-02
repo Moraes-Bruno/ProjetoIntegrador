@@ -10,20 +10,19 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['senha']) &
     $email = addslashes($_POST['email']);
     $senha = addslashes($_POST['senha']);
 
-    if($usuario->validarLogin($email,$senha) == true){
-        if(isset($_SESSION['idaluno'])){
-            echo $_SESSION['idaluno'];
-            header("Location: ../html/home_aluno.php");
+    if($usuario->validarLoginEmpresa($email,$senha) == true){
+        if(isset($_SESSION['idempresa'])){
+            echo $_SESSION['idempresa'];
+            header("Location: ../html/home_empresa.php");
         }
         else{
-            header("Location: ../html/login.php");
+            header("Location: ../html/loginjuridica.php");
         }
     }
     else{
-        header("Location: ../html/login.php");
+        header("Location: ../html/loginjuridica.php");
     }
 
 }else{
-    header("Location: ../html/login.php");
+    header("Location: ../html/loginjuridica.php");
 }
-

@@ -75,33 +75,6 @@ section {
   border: 2px solid var(--seconund-color);
 }
 
-/*footer*/
-
-footer {
-  display: flex;
-  background-color: black;
-  color: white;
-  height: 60px;
-  justify-content: space-between;
-  align-items: center;
-}
-
-footer p {
-  margin-left: 20px;
-}
-
-footer img {
-  width: 35px;
-  color: white;
-  background-color: var(--seconund-color);
-  border-radius: 40%;
-  padding: 5px;
-}
-
-footer img:hover {
-  transform: translateY(-4px);
-}
-
 .redes-sociais {
   display: flex;
   align-items: center;
@@ -152,6 +125,57 @@ footer img:hover {
   transform-origin: bottom right;
   animation: animate 6s linear infinite;
   animation-delay: -3s;
+}
+
+/*.btn-empresa {
+  margin-top: 20px;
+}
+
+.btn-empresa a{
+  color: var(--text-color);
+  padding: 6px 67px;
+  border: 2px solid transparent;
+  transition: ease .40s;
+  text-align: center;
+  justify-content: center;
+}
+
+.btn-empresa .sign-in {
+  font-size: 1em;
+  color: var(--text-color);
+  background: var(--seconund-color);
+  border-radius: 30px;
+}
+
+.btn-empresa .sign-in:hover {
+  background: transparent;
+  border-radius: 30px;
+  border: 2px solid var(--seconund-color);
+}*/
+
+.btn-empresa {
+  font-size: 14px;
+  text-align: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  background: #ea1538;
+  padding: 11px 25px;
+  width: auto;
+  margin-top: 10px;
+  border-radius: 33px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 8px 26px;
+  border: 2px solid #ea1538;
+  transition: ease .40s;
+}
+
+.btn-empresa:hover {
+  background: transparent;
+  border-radius: 2px solid #ea1538;
 }
 
 /*Cadastrar*/

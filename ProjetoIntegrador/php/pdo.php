@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
     define('HOST', 'localhost');
     define('USER', 'root');
     define('PASS', '');
@@ -7,5 +9,13 @@
 
     global $conn;
 
+    try {
+        $conn = new PDO("mysql:host=localhost;dbname=".BASE, USER, PASS);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $conn = new PDO("mysql:host=localhost;dbname=".BASE, USER, PASS);
+    }catch(PDOException $e){
+        echo "Erro: ".$e->getMessage();
+        exit;
+    }
+
+?>

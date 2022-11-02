@@ -36,8 +36,8 @@
 
     <section class="fundo_login">
         <div class="box_login">
-            <form class="form" action="../php/logar.php" method="POST">
-                <h2>Login Aluno</h2>
+            <form class="form" action="../php/logarJuridica.php" method="POST">
+                <h2>Login Empresa</h2>
                 <div class="inputBox">
                     <input type="email" name="email" required="required">
                     <span>E-mail</span>
@@ -52,8 +52,8 @@
                     <a href="recuperarSenha.php">Esqueceu a senha</a>
                     <a href="cadastrar.php">Cadastrar</a>
                 </div>
-                    <input type="submit" value="Entrar">
-                    <a href="loginJuridica.php" class="btn-empresa">Logar Como Empresa</a>
+                <input type="submit" value="Entrar">
+                <a href="login.php" class="btn-empresa">Logar Como Aluno</a>
             </form>
         </div>
     </section>

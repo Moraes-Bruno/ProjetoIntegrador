@@ -8,6 +8,7 @@ $sql = "SELECT * FROM vagas INNER JOIN empresas ON vagas.empresa_id = empresas.e
 $res = $conn->prepare($sql);
 $res->execute();
 
+
 //$qtd = $res->num_rows;
 
 $res = $res->fetchAll();
