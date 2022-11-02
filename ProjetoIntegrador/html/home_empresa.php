@@ -1,3 +1,9 @@
+<?php
+
+require '../php/pdo.php';
+
+if(isset($_SESSION['idempresa']) && !empty($_SESSION['idempresa'])): ?>
+
 <!DOCTYPE html> 
 <html lang="pt-br">
 
@@ -33,7 +39,7 @@
             <a href="PerfilAluno.php"><img src="../imgs/Paula_redonda_icone.png" class="imgPerfil"alt="Imagem perfil"></a>
             <p>Empresa nome</p>
             <div class="h-btn">
-                <a href="../php/logout.php" class="sign-in">Sair</a>    
+                <a href="../php/logoutjuridica.php" class="sign-in">Sair</a>    
             </div>
         </div>
     </header>
@@ -57,6 +63,8 @@
 </body>
 
 </html>
+
+<?php else: header("Location: ../html/loginjuridica.php"); endif;?>
 
 
 

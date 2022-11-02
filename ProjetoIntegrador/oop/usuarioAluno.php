@@ -20,7 +20,6 @@ class Usuario{
         }
         else{
             return false;
-            header("Location: ../html/login.php");
         }
 
     }

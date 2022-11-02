@@ -12,7 +12,6 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['senha']) &
 
     if($usuario->validarLoginEmpresa($email,$senha) == true){
         if(isset($_SESSION['idempresa'])){
-            echo $_SESSION['idempresa'];
             header("Location: ../html/home_empresa.php");
         }
         else{

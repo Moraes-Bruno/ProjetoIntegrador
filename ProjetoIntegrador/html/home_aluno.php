@@ -2,7 +2,7 @@
 
 require '../php/pdo.php';
 
-if(isset($_SESSION['idaluno']) && !empty($_SESSION['idaluno'])): ?>
+if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])): ?>
 
 
 <!DOCTYPE html> 
