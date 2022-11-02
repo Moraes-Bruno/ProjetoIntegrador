@@ -36,21 +36,23 @@ $res = $res->fetchAll();
 </head>
 
 <body>
-    <header>
+<header>
         <a href="home_aluno.php" class="logo">Fatec<span> Vagas</span></a>
         <div class="bx bx-menu" id="menu-icon"></div>
 
         <ul class="navlist">
-            <li><a href="home_aluno.php">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
             <li><a href="vagas.php">Vagas</a></li>
+            <li><a href="#">Minhas Vagas</a></li>
         </ul>
 
         <div class="navDireita">
             <a href="PerfilAluno.php"><img src="../imgs/Paula_redonda_icone.png" class="imgPerfil"alt="Imagem perfil"></a>
-            <p>Paula Raquel Lima</p>
+            <p><?php echo $nome;?></p>
+            <div class="h-btn">
+                <a href="login.php" class="sign-in">Sair</a>    
+            </div>
         </div>
+        
     </header>
 
 
@@ -137,7 +139,7 @@ $res = $res->fetchAll();
 
 
                     </div>
-                    <a href="vagas_descricao.php?id=<?php echo $linha['vaga_id']; ?>" id="detalhes">Ver detalhes</a>
+                    <a href="vagas_descricao.php?id=<?php echo $linha['IDvaga']; ?>" id="detalhes">Ver detalhes</a>
                 </div>
             <?php endforeach; ?>
 
