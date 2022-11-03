@@ -65,11 +65,11 @@ $res = $res->fetch();
                 <p><?php echo $res['descricao'];?></p>
             </div>
             <div class="margim">
-                <h1>Experiencias:</h1>
+                <h1>Experiencias</h1>
                 <p><?php echo $res['experiencia'];?></p>
             </div>
             <div>
-                <h1>O que nós Oferecemos:</h1>
+                <h1 id="oferecer">O que nós Oferecemos</h1>
                 <p>Salario: R$ <?php echo $res['salario'];?></p>
                 <p>Beneficios: </p>
             </div>

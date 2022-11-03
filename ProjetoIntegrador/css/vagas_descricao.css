@@ -17,11 +17,15 @@ body{
     font-size: 100%;
 }
 
+
+
 .background {
+    border: 2px solid crimson;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.623);
     margin: auto;
     background-color: #23242a;
     justify-content: center;
-    text-align: center;
+    text-align: justify;
     width: 1200px;
     height: 700px;
 }
@@ -31,13 +35,24 @@ body{
     color: #ea1538;
 }
 
+#oferecer{
+    padding: 0.5em;
+}
+
 .margim, .margim2 {
     padding: 20px;
+}
+
+.margim2{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
 .margim p {
     padding: 15px;
 }
+
 
 
 
