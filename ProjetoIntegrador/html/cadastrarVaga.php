@@ -4,6 +4,20 @@ require '../php/verificaJuridica.php';
 
 if(isset($_SESSION['idempresa']) && !empty($_SESSION['idempresa'])): ?>
 
+<?php 
+$idempresa = $_SESSION['idempresa'];
+$sql = "SELECT * FROM vagas INNER JOIN empresas ON vagas.empresa_id = empresas.IDempresa WHERE IDempresa = $idempresa ";
+
+$res = $conn->prepare($sql);
+$res->execute();
+
+
+//$qtd = $res->num_rows;
+
+$res = $res->fetchAll();
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -87,17 +101,19 @@ if(isset($_SESSION['idempresa']) && !empty($_SESSION['idempresa'])): ?>
 
         <p id="mv">Minhas Vagas</p>
 
-        <div class="minhas_vagas">
-            <div class="vaga">
-                <h2>Nome Vaga</h2>
-                <p>Descrição da vaga </p>
-                <div class="data"><img src="../imgs/tempo.png" alt="relogio"><p>dd/mm/yyyy</p></div>
-                <p id="cidade"> <img src="../imgs/pointer.png" alt="pointer"> Cidade</p>
-                <a href="#">Alterar Vaga</a>
-        </div>
+        <?php foreach ($res as $linha) : ?>
+            <div class="minhas_vagas">
+                <div class="vaga">
+                    <h2><?php echo $linha['nome_vaga'];?></h2>
+                    <p>Empresa: <?php echo $linha['nome_empresa'];?></p>
+                    <div class="data"><img src="../imgs/tempo.png" alt="relogio"><p>Data de Abertura: <?php echo $linha['data_abertura'];?></p></div>
+                    <p id="cidade"> <img src="../imgs/pointer.png" alt="pointer"> Cidade: <?php echo $linha['cidade_vaga'];?></p>
+                    <a href="#">Alterar Vaga</a>
+                    <a href="#">Excluir Vaga</a>
+            </div>
 
         </div>
-
+        <?php endforeach; ?>
 
 
 
