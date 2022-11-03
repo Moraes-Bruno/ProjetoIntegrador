@@ -51,49 +51,45 @@ $res = $res->fetchAll();
         </div>
     </header>
 
+    <p id="mv">Cadastrar Vagas</p>
+
         <main>
 
 
-            <form action="../php/vagasCadastro.php"  method="POST">
-                <div class="formulario">
-                    <label for="nome">Nome da Vaga</label>
-                    <input type="text" name="nome" id="nome" required="required">
-
-                    <label for="nivel">Nivel da vaga</label>
-                    <input type="text" name="nivel" id="nivel" required="required">
-
-                    <label for="modelo">Modelo de contratação</label>
-                    <input type="text" name="modelo" id="modelo" required="required">
-
-                    <label for="abertura">Data de abertura</label>
-                    <input type="date" name="abertura" id="abertura" required="required">
-
-                    <label for="fechamento">Data de fechamento</label>
-                    <input type="date" name="fechemento" id="fechemento" required="required">
-
-                    <label for="modalidade">Modalidade de trabalho</label>
-                    <input type="text" name="modalidade" id="modalidade" required="required">
-
-                    <label for="salario">Salário</label>
-                    <input type="text" name="salario" id="salario" required="required">
-
-                    <label for="cidade">Cidade da vaga</label>
-                    <input type="text" name="cidade" id="cidade" required="required">
+            <form action="../php/vagasCadastro.php" class="form" method="POST">
+                <div class="esquerda">
+                    <div class="column">
+                        <label for="nome">Nome da Vaga</label>
+                        <input type="text" name="nome" id="nome" required="required">
+                        <label for="nivel">Nivel da vaga</label>
+                        <input type="text" name="nivel" id="nivel" required="required">
+                        <label for="modelo">Modelo de contratação</label>
+                        <input type="text" name="modelo" id="modelo" required="required">
+                        <label for="abertura">Data de abertura</label>
+                        <input type="date" name="abertura" id="abertura" required="required">
+                        <label for="fechamento">Data de fechamento</label>
+                        <input type="date" name="fechemento" id="fechemento" required="required">
+                        <label for="modalidade">Modalidade de trabalho</label>
+                        <input type="text" name="modalidade" id="modalidade" required="required">
+                        <label for="salario">Salário</label>
+                        <input type="text" name="salario" id="salario" required="required">
+                        <label for="cidade">Cidade da vaga</label>
+                        <input type="text" name="cidade" id="cidade" required="required">
+                    </div>
                 </div>
                 <div class="direita">
-                    <p id="bio">Descrição</p>
-                    <textarea class="campoDireita"name="Biografia" id="Biografia" cols="30" rows="10" required="required"></textarea>
-                    <p>Requisitos</p>
-                    <textarea class="campoDireita"name="experiencia" id="experiencia" cols="30" rows="10" required="required"></textarea>
-                    <p>Benefícios</p>
-                    <textarea class="campoDireita"name="links" id="links" cols="30" rows="10" required="required"></textarea>
-                </div>
-                <div class="botoes">
-                    <input id="cancelar" type="button" value="Cancelar" >
-                    <input id="cadastrar" type="submit" value="Salvar">
+                    <div class="column">
+                        <p id="bio">Descrição</p>
+                        <textarea class="campoDireita"name="Biografia" id="Biografia" cols="30" rows="10" required="required"></textarea>
+                        <p>Requisitos</p>
+                        <textarea class="campoDireita"name="experiencia" id="experiencia" cols="30" rows="10" required="required"></textarea>
+                        <p>Benefícios</p>
+                        <textarea class="campoDireita"name="links" id="links" cols="30" rows="10" required="required"></textarea>
+                        <div class="botoes"><input id="cadastrar" type="submit" value="Salvar"></div>
+                        
+                    </div>
                 </div>
             </form>
-
 
         </main>
         
@@ -108,8 +104,10 @@ $res = $res->fetchAll();
                     <p>Empresa: <?php echo $linha['nome_empresa'];?></p>
                     <div class="data"><img src="../imgs/tempo.png" alt="relogio"><p>Data de Abertura: <?php echo $linha['data_abertura'];?></p></div>
                     <p id="cidade"> <img src="../imgs/pointer.png" alt="pointer"> Cidade: <?php echo $linha['cidade_vaga'];?></p>
-                    <a href="#">Alterar Vaga</a>
-                    <a href="#">Excluir Vaga</a>
+                    <div class="vaga-btn">
+                        <a href="#" id="alterar">Alterar Vaga</a>
+                        <a href="#">Excluir Vaga</a>
+                    </div>
             </div>
 
         </div>

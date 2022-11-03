@@ -53,7 +53,7 @@
                     <a href="cadastrar.php">Cadastrar</a>
                 </div>
                     <input type="submit" value="Entrar">
-                    <a href="loginJuridica.php" class="btn-empresa">Logar Como Empresa</a>
+                    <a href="loginjuridica.php" class="btn-empresa">Logar Como Empresa</a>
             </form>
         </div>
     </section>

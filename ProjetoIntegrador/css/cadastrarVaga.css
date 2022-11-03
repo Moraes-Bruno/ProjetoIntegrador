@@ -15,30 +15,48 @@ body{
    background-size: 100%;
 }
 
-main{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 4fr;
-    width: 1000px;
-    margin: auto;
-    margin-top: 10em;
-    margin-bottom: 1em;
+.form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
 }
 
-/*----Começo area direita----*/
+.esquerda{
+    display: flex;
+    flex-direction: left;
+    padding: 3em;
+}
+.esquerda label{
+    color: white;;
+    font-size: 1.1em;
+    font-weight: 700;
+    align-self: center;
+    width: 300px;
+    font-size: 1.2em ;
+}
+
+
+.esquerda input{
+    width: 300px;
+    height: 2em;
+    outline: none;
+    background-color: transparent;
+    border-width: 0px 0px 2px 0px;
+    border-color: crimson;
+    color: white;
+    font-size: 1.2em ;
+}
 
 .direita{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    padding: 1em;
-    grid-column-start: 2 ;
-    grid-column-end: 3;    
+    flex-direction: right;
+    padding: 3em;
 }
 
 .direita p{
+    text-align: center;
     color: white;
     font-size: 1.1em;
     font-weight: 700;
@@ -59,82 +77,19 @@ main{
     text-align: justify;
 }
 
-/*----Começo imagem perfil----*/
-picture{
-    margin: auto;
-}
-
-picture>img{
-    width: 300px;
-    height: 300px;
-}
-
-#celular{
-    display: none;   
-}
-
-/*----Fim imagem perfil----*/
-
-
-
-/*----Fim area direita----*/
-
-/*----Começo area esquerda----*/
-.formulario{
-    padding: 1em;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-}
-
-.formulario label{
-    color: white;;
-    font-size: 1.1em;
-    font-weight: 700;
-    align-self: center;
-    width: 300px;
-    font-size: 1.2em ;
-}
-
-
-.formulario input{
-    width: 300px;
-    height: 2em;
-    outline: none;
-    background-color: transparent;
-    border-width: 0px 0px 2px 0px;
-    border-color: crimson;
-    color: white;
-    font-size: 1.2em ;
-}
-
-
-
-
-/*----Fim area esquerda----*/
-
-/*----começo botões----*/
 .botoes{
     height: 120px;
     width: 100%;
     margin-top: 2em;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    gap: 2em;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 3;
+
 }
 
-#cadastrar,#cancelar{
-    width: 250px;
+#cadastrar{
+    width: 350px;
     height: 50px;
     border-style: none;
     border-radius: 30px;
@@ -157,51 +112,13 @@ picture>img{
     transform: translateY(-10px);
 }
 
-#cancelar{
-    background-color: black;
-}
 
-#cancelar:hover {
-    background-color: white;
-    border: solid 2px var(--vermelho);
-    border-radius: 30px;
-    color: black;
-    transform: translateY(-10px);
-}
-
-.links {
+.column{
     display: flex;
-    justify-content: space-between;
-  }
-  
-  .links a {
-    margin: 10px 0;
-    font-size: 1em;
-    color: #ea1538;
-    text-decoration: none;
-  }
-  
-  .links a:hover,
-  .links a:nth-child(2) {
-    color: white;
-  }
-
-/*----Fim botões----*/
-
-@media (max-width: 1380px) {
-    main{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 2fr;
-        width: 1000px;
-        margin: auto;
-        margin-top: 7em;
-        margin-bottom: 1em;
-    }
+    flex-direction: column;
+    gap: 1em;
 }
 
-
-/*Começo minhas vagas*/
 #mv{
     text-align: center;
     color: var(--vermelho);
@@ -244,7 +161,7 @@ picture>img{
     width: 20px;
 }
 
-.vaga>a{
+.vaga-btn>a{
     padding: 5px;
     text-align: center;
     color: white;
@@ -252,262 +169,52 @@ picture>img{
     border: 1px solid black;
     border-radius: 20px;
     background-color: var(--vermelho);
+    transition: ease .40s;
 }
+
+.vaga-btn>a:hover{
+    background-color: white;
+    border: solid 2px var(--vermelho);
+    border-radius: 30px;
+    color: black;
+    transform: translateY(-10px);
+}
+
+#alterar{
+    text-align: center;
+    color: white;
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: green;
+    transition: ease .40s;
+}
+
+#alterar:hover{
+
+    background-color: white;
+    border: solid 2px var(--vermelho);
+    border-radius: 30px;
+    color: black;
+    transform: translateY(-10px);
+}
+
+.vaga-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
 
 
 
 /*Fim minhas vagas*/
   
-  @media (max-width: 1120px) {
+
+
+
+
+
 
    
-   
-  }
-  
-  @media (max-width: 770px) {
-    main{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 2fr;
-        width: auto;
-        margin: auto;
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
-
-    picture>img{
-        height: 300px;
-        width: 300px;
-    }
-
-    .formulario{
-        padding: 1em;
-        grid-column-start: 1;
-        grid-column-end: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1em;
-        font-size: 1.2em;
-    }
-
-    .formulario>input{
-        font-size: 1.2em;
-    }
-    
-    .direita{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1em;
-        padding: 1em;
-        margin-right: 1em;
-        grid-column-start: 1;
-        grid-column-end: 1;
-        font-size: 1.2em;
-    }
-
-    .direita textarea{
-        width: 320px;
-        height: 150px;
-        font-size: 1.2em;
-    }
-
-    .botoes{
-        height: 120px;
-        width: 100%;
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: space-between;
-        align-items: center;
-        justify-content: center;
-        grid-column-start: 1;
-        grid-column-end: 1;
-        grid-row-start: 4;
-        grid-row-end: 4;
-    }
-
-
-    .direita>#bio{
-        margin-top: 2em;
-    }
-
-    .direita p{
-        color: white;
-        font-size: 1.1em;
-        font-weight: 700;
-        align-self: center;
-        width: 320px;
-    }
-
-    #celular{
-        display: block;
-    }
-    
-   
-
-  }
-  
-  @media (max-width: 750px) {
-    main{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 2fr;
-        width: auto;
-        margin: auto;
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
-
-    picture>img{
-        height: 300px;
-        width: 300px;
-    }
-
-    .formulario{
-        padding: 1em;
-        grid-column-start: 1;
-        grid-column-end: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1em;
-        font-size: 1.2em;
-    }
-
-    .formulario>input{
-        font-size: 1.2em;
-    }
-    
-    .direita{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1em;
-        padding: 1em;
-        margin-right: 1em;
-        grid-column-start: 1;
-        grid-column-end: 1;
-        font-size: 1.2em;
-    }
-
-    .direita textarea{
-        width: 320px;
-        height: 150px;
-        font-size: 1.2em;
-    }
-
-    .botoes{
-        height: 120px;
-        width: 100%;
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: space-between;
-        align-items: center;
-        justify-content: center;
-        grid-column-start: 1;
-        grid-column-end: 1;
-        grid-row-start: 4;
-        grid-row-end: 4;
-    }
-
-
-    .direita>#bio{
-        margin-top: 2em;
-    }
-
-    .direita p{
-        color: white;
-        font-size: 1.1em;
-        font-weight: 700;
-        align-self: center;
-        width: 320px;
-    }
-
-    #celular{
-        display: block;
-    }
-  }
-  
-  @media (max-width: 630px) {
-
-    main{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 2fr;
-        width: auto;
-        margin: auto;
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
-
-    .formulario{
-        padding: 1em;
-        grid-column-start: 1;
-        grid-column-end: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1em;
-    }
-    
-    .direita{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1em;
-        padding: 1em;
-        margin-right: 1em;
-        grid-column-start: 1;
-        grid-column-end: 1;
-        font-size: 1.2em;
-    }
-
-    .direita textarea{
-        width: 320px;
-        height: 150px;
-    }
-
-    .botoes{
-        height: 120px;
-        width: 100%;
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: space-between;
-        align-items: center;
-        justify-content: center;
-        grid-column-start: 1;
-        grid-column-end: 1;
-        grid-row-start: 4;
-        grid-row-end: 4;
-    }
-
-    .direita>#bio{
-        margin-top: 2em;
-    }
-
-    .direita p{
-        color: white;
-        font-size: 1.1em;
-        font-weight: 700;
-        align-self: center;
-        width: 320px;
-    }
-
-    #celular{
-        display: block;
-    }
-
-    picture{
-        display: none;
-    }
-
-    
-    
-  }
