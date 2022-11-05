@@ -197,11 +197,39 @@
 
   
 @media (max-width: 770px) {
-  
+    header {
+      padding: 14px 4%;
+    }
+    :root{
+      --big-font: 3.2rem;
+      --h2-font: 1.8rem;
+      --p-font: 0.9rem;
+    }
+
+    .navDireita {
+      margin-right: 15px;
+    }
+    .navDireita p {
+      display: none;
+    }
 }
 
 @media (max-width: 750px) {
+    header {
+      padding: 14px 4%;
+    }
+    :root{
+      --big-font: 3.2rem;
+      --h2-font: 1.8rem;
+      --p-font: 0.9rem;
+    }
 
+    .navDireita {
+      margin-right: 15px;
+    }
+    .navDireita p {
+      display: none;
+    }
 }
 
 @media (max-width: 630px) {

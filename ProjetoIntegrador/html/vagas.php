@@ -117,33 +117,24 @@ $res = $res->fetchAll();
 
 
 
-        <main class="detalhe-vagas">
+        <section class="vagas_geral">
+            <div class="container">
             <?php foreach ($res as $linha) : ?>
-                <div class="detalhe-vaga-mini">
-                    <h3 class="nome-vaga"><?php echo $linha['nome_vaga'];?></h3>
-                    <h3 class="empresa"><?php echo $linha['nome_empresa'];?></h3>
-
-                    <p class="descricao"><?php echo $linha['descricao'];?></p>
-
-
-                    <div class="loctime-flex">
-                        <div class="location">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <p class="localizacao"><?php echo $linha['cidade_vaga'];?></p>
+                <div class="card">
+                    <div class="box">
+                        <div class="content">
+                            <h2><?php echo $linha['IDvaga'];?></h2>
+                            <h3><?php echo $linha['nome_vaga'];?></h3>
+                            <p><?php echo $linha['descricao'];?></p>
+                            <a href="vagas_descricao.php">Saiba Mais</a>
+                            <p>Cidade: <?php echo $linha['cidade_vaga'];?></p>
+                            <p class="top">Data Fechamento: <?php echo $linha['data_abertura'];?></p>
                         </div>
-
-                        <div class="time">
-                            <i class="fa-regular fa-clock"></i>
-                            <p><?php echo $linha['data_abertura'];?></p>
-                        </div>
-
-
                     </div>
-                    <a href="vagas_descricao.php?id=<?php echo $linha['IDvaga']; ?>" id="detalhes">Ver detalhes</a>
                 </div>
             <?php endforeach; ?>
-
-        </main>
+            </div>
+        </section>
 
 
     </section>

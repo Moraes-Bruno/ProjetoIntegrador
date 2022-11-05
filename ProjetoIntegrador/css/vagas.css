@@ -16,6 +16,9 @@
   --big-font: 5.7rem;
   --h2-font: 3.8rem;
   --p-font: 1rem;
+  --corFundo:#091217;
+  --fundoCdastro:#23242a;
+  --vermelho: rgba(234, 21, 57, 0.808);
 }
 
 body {
@@ -83,109 +86,106 @@ form .fa-magnifying-glass {
   margin-left: 10px;
 }
 
-.vagas {
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  column-gap: 60px;
-}
+/**/
 
-.detalhe-vagas {
-  color: rgb(230, 225, 225);
-}
-
-.filtros{
-  color: rgb(230, 225, 225);
-  padding: 20px;
-}
-
-
-.filtros-form{
+.vagas_geral {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  justify-content: center;
   align-items: center;
-  text-align: center;
+  min-height: 100vh;
 }
 
-.filtros-form p, #local-trabalho{
-  font-size: 20px;
-}
-
-
-.botoes{
-  margin-bottom:  20px;
+.container {
   display: flex;
-  text-align: center;
-  gap: 8px;
-  
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  padding: 40px 0;
 }
 
-
-.option-cidade{
-  width: 150px;
-  height: 30px;
-}
-
-
-#botao{
-  background: rgb(234, 21, 56);
-  padding: 5px;
-  width: 150px;
-  border: 1px solid #000;
-  border-left: none;
-  border-radius: 20px 20px 20px 20px;
-  outline: none;
-  color: #fff;
-  cursor: pointer;
-  letter-spacing: 1px;
-  font-size: 15px;
-  margin-top:  20px;
-}
-
-
-
-.detalhe-vaga-mini {
-  display: flex;
-  flex-direction: column;
+.container .card{
+  position: relative;
+  width: 320px;
+  height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(0,0,0,0.5),inset 5px 5px 5px rgba(255,255,255,0.5),
+  5px 5px 5px rgba(0,0,0,0.5),inset 5px 5px 5px rgba(255,255,255,0.5);
+  border-radius: 15px;
   margin: 30px;
-  gap: 10px;
+}
+
+.container .card .box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.container .card:hover .box {
+  transform: translateY(-50px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  background: linear-gradient(45deg, black, #091217);
+}
+
+.container .card .box .content {
   padding: 20px;
-  border-top: 1px solid #dededead;
-}
-
-.loctime-flex {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-.location {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.time {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-
-#detalhes{
-  background: rgb(234, 21, 56);
-  padding: 5px;
-  width: 150px;
-  border: 1px solid #000;
-  border-radius: 20px 20px 20px 20px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 15px;
-  margin-top:  20px;
   text-align: center;
+}
+
+
+
+.container .card .box .content h2 {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size: 8em;
+  color: rgba(0,0,0,0.02);
+  transition: 0.5s;
+}
+
+.container .card:hover .box .content h2 {
+  color: rgba(0,0,0,0.5);
+}
+
+.container .card .box .content h3 {
+  font-size: 1.4em;
+  color: var(--vermelho);
+  z-index: 1;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.container .card .box .content p {
+  font-size: 1em;
+  font-weight: 300;
+  color: white;
+  z-index: 1;
+  transition: 0.5s;
+  margin-top: 10px;
+}
+
+.container .card .box .content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: var(--vermelho);
+  margin-top: 15px;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.container .card:hover .box .content a {
+  background: var(--vermelho);
 }
 
 @media (max-width: 1380px) {
