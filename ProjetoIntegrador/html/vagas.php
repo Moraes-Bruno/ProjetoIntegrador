@@ -126,7 +126,7 @@ $res = $res->fetchAll();
                             <h2><?php echo $linha['IDvaga'];?></h2>
                             <h3><?php echo $linha['nome_vaga'];?></h3>
                             <p><?php echo $linha['descricao'];?></p>
-                            <a href="vagas_descricao.php">Saiba Mais</a>
+                            <a href="vagas_descricao.php?id=<?php echo $linha['IDvaga']; ?>" id="detalhes">Ver detalhes</a>
                             <p>Cidade: <?php echo $linha['cidade_vaga'];?></p>
                             <p class="top">Data Fechamento: <?php echo $linha['data_abertura'];?></p>
                         </div>
