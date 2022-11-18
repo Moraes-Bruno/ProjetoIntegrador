@@ -6,6 +6,7 @@ if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])): ?>
 
 <?php
 
+
 $sql = "SELECT *  FROM vagas INNER JOIN empresas ON vagas.empresa_id = empresas.IDempresa WHERE IDvaga = :idvaga";
 
 

@@ -2,8 +2,15 @@
 
 require '../php/verificaJuridica.php';
 
-if(isset($_SESSION['idempresa']) && !empty($_SESSION['idempresa'])): ?>
+if(isset($_SESSION['idempresa']) && !empty($_SESSION['idempresa'])):?>
+<?php
 
+$idempresa = $_SESSION['idempresa'];
+$sql = "SELECT * FROM empresas where IDempresa=$idempresa";
+$stmt = $conn->query($sql);
+
+$stmt = $stmt->fetch();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -46,19 +53,19 @@ if(isset($_SESSION['idempresa']) && !empty($_SESSION['idempresa'])): ?>
             <form action="post" class="formulario">
 
                 <label for="ra">Nome Fantasia</label>
-                <input type="text" name="ra">
+                <input type="text" name="ra" value=<?php echo $stmt['nome_empresa']?>>
 
                 <label for="nome">Razão Social</label>
-                <input type="text" name="nome">
+                <input type="text" name="nome" value=<?php echo $stmt['razao_social']?>>
 
                 <label for="sobrenome">Email Empresa</label>
-                <input type="text" name="sobrenome">
+                <input type="text" name="sobrenome" value=<?php echo $stmt['email_corporativo']?>>
 
                 <label for="nascimento">Telefone Empresa</label>
-                <input type="text" name="nascimento">
+                <input type="text" name="nascimento" value=<?php echo $stmt['telefone']?>>
 
                 <label for="genero">CNPJ</label>
-                <input type="text" name="genero">
+                <input type="text" name="genero" value=<?php echo $stmt['cnpj']?>>
 
                 <div class="links">
                     <a href="recuperarSenha.php">Alterar senha</a>
