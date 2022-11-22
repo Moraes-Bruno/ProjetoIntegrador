@@ -20,7 +20,7 @@ $links = $_POST["links"];
 
 
 $sqlUpdate = "UPDATE vagas Set nome_vaga='$nome_vaga',salario='$salario',nivel_vaga='$nivel_vaga',data_abertura='$data_abertura',data_fechamento='$data_fechamento',modelo_contrataco='$modelo_contrataco',modalidade_de_trabalho='$modalidade_de_trabalho',cidade_vaga='$cidade_vaga',descricao='$descricao',experiencia='$experiencia',links='$links' where IDvaga=$id";
-$stmt = $conn->query($sqlUpdate);
+$stmt = $conn->query($sqlUpdate);   
 
 header("Location: ../html/cadastrarVaga.php");
 

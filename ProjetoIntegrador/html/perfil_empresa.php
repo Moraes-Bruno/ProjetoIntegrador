@@ -50,25 +50,26 @@ $stmt = $stmt->fetch();
                 <img src="../imgs/Paula_redonda_icone.png" alt="foto de perfil">
             </picture>
 
-            <form action="post" class="formulario">
+            <form method="post" action="../php/alteraPerfilEmpresa.php" class="formulario">
 
                 <label for="ra">Nome Fantasia</label>
-                <input type="text" name="ra" value=<?php echo $stmt['nome_empresa']?>>
+                <input type="text" name="nome" readonly value=<?php echo $stmt['nome_empresa']?>>
 
                 <label for="nome">Razão Social</label>
-                <input type="text" name="nome" value=<?php echo $stmt['razao_social']?>>
+                <input type="text" name="razao" readonly  value=<?php echo $stmt['razao_social']?>>
 
                 <label for="sobrenome">Email Empresa</label>
-                <input type="text" name="sobrenome" value=<?php echo $stmt['email_corporativo']?>>
+                <input type="text" name="email" value=<?php echo $stmt['email_corporativo']?>>
 
                 <label for="nascimento">Telefone Empresa</label>
-                <input type="text" name="nascimento" value=<?php echo $stmt['telefone']?>>
+                <input type="text" name="telefone" value=<?php echo $stmt['telefone']?>>
 
                 <label for="genero">CNPJ</label>
-                <input type="text" name="genero" value=<?php echo $stmt['cnpj']?>>
+                <input type="text" name="cnpj" readonly  value=<?php echo $stmt['cnpj']?>>
 
-                <div class="links">
-                    <a href="recuperarSenha.php">Alterar senha</a>
+               
+                <div class="botoes">
+                <input id="cadastrar" type="submit" value="Alterar">
                 </div>
 
             </form>
@@ -78,13 +79,15 @@ $stmt = $stmt->fetch();
                 <picture>
                     <img src="../imgs/Paula_redonda_icone.png" alt="foto de perfil">
                 </picture>
+                <div class="links">
+                    <a href="recuperarSenha.php">Alterar senha</a>
+                </div>
 
                 
             </div>
             
-            <div class="botoes">
-                <input id="cadastrar" type="button" value="Salvar">
-            </div>
+            
+          
 
         </main>
         
