@@ -16,7 +16,10 @@ $res->execute();
 
 //$qtd = $res->num_rows;
 
-$res = $res->fetch();
+ $res = $res->fetch();
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -79,7 +82,7 @@ $res = $res->fetch();
                 <p>Fechamento da Vaga: <?php echo $res['data_fechamento'];?></p>
                 <p>Cidade: <?php echo $res['cidade_vaga'];?></p>
             </div>
-            <input type="submit" value="Canditar a Vaga">
+            <a href="../php/sub.php?id=<?php echo $res['IDvaga']?>"><input type="submit" value="Candidatar-se"></a>
         </div>
     </section>
 
