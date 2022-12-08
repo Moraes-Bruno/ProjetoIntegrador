@@ -22,14 +22,6 @@
     <header>
         <a href="index.html" class="logo">Fatec<span> Vagas</span></a>
         <div class="bx bx-menu" id="menu-icon"></div>
-
-        <ul class="navlist">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="vagas.php">Vagas</a></li>
-        </ul>
-
         <div class="h-btn">
             <a href="login.php" class="sign-in">Entrar</a>
         </div>
