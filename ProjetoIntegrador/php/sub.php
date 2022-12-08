@@ -9,8 +9,8 @@ if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])){
 
     $sql="INSERT INTO aluno_vaga(id_vaga,id_aluno) VALUES (?,?)";
     $stmt=$conn->prepare($sql);
-    $stmt->execute($idvaga,$idaluno);
-
+    $stmt->execute([$idvaga,$idaluno]);
+    
     
     header("Location: ../html/vagas_descricao.php");
   
