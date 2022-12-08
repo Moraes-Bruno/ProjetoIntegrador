@@ -72,10 +72,9 @@ $res = $res->fetch();
             <div>
                 <h1 id="oferecer">O que nós Oferecemos</h1>
                 <p>Salario: R$ <?php echo $res['salario'];?></p>
-                <p>Beneficios: </p>
+                <p>Beneficios: <?php echo $res['links'];?></p>
             </div>
             <div  class="margim2">
-                <p>Horário de trabalho:</p>
                 <p>Abertura da Vaga: <?php echo $res['data_abertura'];?></p>
                 <p>Fechamento da Vaga: <?php echo $res['data_fechamento'];?></p>
                 <p>Cidade: <?php echo $res['cidade_vaga'];?></p>
