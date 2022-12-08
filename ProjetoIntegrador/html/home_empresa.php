@@ -12,7 +12,7 @@ if(isset($_SESSION['idempresa']) && !empty($_SESSION['idempresa'])): ?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Empresa</title>
+    <title>Home</title>
 
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css\index.css">

@@ -1,6 +1,6 @@
 <?php
 
-include '../php/pdo.php';
+require '../php/pdo.php';
 
 /*Dados Principais*/
 $CPF = $_POST["cpf"];

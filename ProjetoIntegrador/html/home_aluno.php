@@ -13,7 +13,7 @@ if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])): ?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Aluno</title>
+    <title>Home</title>
 
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css\index.css">

@@ -4,17 +4,20 @@ require '../php/verifica.php';
 
 if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])):?>
 <?php
+
    $id = $_SESSION['idUser'];
+
 
     /*Recupera as informações da tabela Alunos*/
     $sql =" SELECT *  FROM alunos join cursos on alunos.id_curso = cursos.IDcurso where IDaluno = $id";
     $stmt = $conn->query($sql);
     $stmt = $stmt->fetch();
-
+   
     /*Recupera as informações da tabela Enderecos*/
     $endereco = " SELECT * FROM endereco_alunos join enderecos on endereco_alunos.endereco_id=enderecos.IDendereco join bairros on enderecos.bairro_id=bairros.IDbairro join cidades on bairros.cidade_id=cidades.IDcidade where Aluno_id=$id";
     $stmt2 = $conn->query($endereco);
     $stmt2 = $stmt2->fetch();
+     
 
     /*Recupera as informações da tabela Links*/
     $links = " SELECT * from links where id_aluno = $id ";
@@ -73,35 +76,48 @@ if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])):?>
                 <img src="../imgs/Paula_redonda_icone.png" alt="foto de perfil">
             </picture>
 
-            <form action="alteraPerfilAluno.php" method="POST" class="formulario">
+            <form action="../php/alteraPerfilAluno.php" method="POST" class="formulario">
                     
                 <div>
                     <label for="ra">Ra</label>
-                    <input type="text" name="ra" value="<?php echo $stmt['RA']?>">
+                    <input type="text"  name="ra" readonly value="<?php echo $stmt['RA']?>">
+
                     <label for="nome">Nome</label>
-                    <input type="text" name="nome" value="<?php echo $stmt['nome']?>">
+                    <input type="text" name="nome" readonly value="<?php echo $stmt['nome']?>">
+
                     <label for="sobrenome">Sobrenome</label>
-                    <input type="text" name="sobrenome" value="<?php echo $stmt['sobrenome']?>">
+                    <input type="text" name="sobrenome" readonly value="<?php echo $stmt['sobrenome']?>">
+
                     <label for="nascimento">Data de nascimento</label>
-                    <input type="text" name="nascimento" value="<?php echo $stmt['data_nascimento']?>">
+                    <input type="text" name="nascimento" readonly value="<?php echo $stmt['data_nascimento']?>">
+
                     <label for="genero">Gênero</label>
                     <input type="text" name="genero" value="<?php echo $stmt['genero']?>">
+
                     <label for="curso">Curso</label>
-                    <input type="text" name="curso" value="<?php echo $stmt['nome_curso']?>">
+                    <input type="text" readonly name="curso"  value="<?php echo $stmt['nome_curso']?>">
+
                     <label for="periodoCurso">Perido do Curso</label>
-                    <input type="text" name="periodoCurso" value="<?php echo $stmt['periodo']?>">
+                    <input type="text" name="periodoCurso" readonly value="<?php echo $stmt['periodo']?>">
+
                     <label for="cidade">Cidade</label>
                     <input type="text" name="cidade" value="<?php echo $stmt2['nome']?>">
+
                     <label for="competencias">Competencias</label>
                     <input type="text" name="competencias" value="<?php echo $stmt['competencias']?>">
+
                     <label for="idioma">Idiomas</label>
                     <input type="text" name="idioma" value="<?php echo $stmt4['idioma']?>">
+
                     <label for="telefone">Telefone</label>
                     <input type="tel" name="telefone" value="<?php echo $stmt5['telefone']?>">
+
                     <label for="modadalidade">Modalidade de preferência</label>
                     <input type="text" name="modalidade" value="<?php echo $stmt['modalidade_preferencia']?>">
+
                     <label for="interesse">Área de interesse</label>
                     <input type="text" name="interesse" value="<?php echo $stmt['regiao_interesse']?>">
+
                     <div class="links">
                         <a href="recuperarSenha.php">Alterar senha</a>
                     </div>
